@@ -28,6 +28,7 @@ public class TankController : MonoBehaviour {
 	
 
 	void FixedUpdate () {
+		//Moving tank with left/right keys
 		float moveHoriz = Input.GetAxis("Horizontal");
 
 		rBody.velocity = new Vector2(moveHoriz * maxSpeed, rBody.velocity.y);	
@@ -44,9 +45,20 @@ public class TankController : MonoBehaviour {
 		} else {
 			exhaustFume.GetComponent<SpriteRenderer> ().enabled = false;
 		}
+
+		// Moving the barrel with up/down keys
+		float moveVertical = Input.GetAxis("Vertical");
+
+		if (direction == Direction.left) 
+			barrel.transform.Rotate (new Vector3 (0, 0, moveVertical));
+		else 
+			barrel.transform.Rotate (new Vector3 (0, 0, - moveVertical));		
 	}
 
 	void changeDirrection(Direction facingDirection){
+		if (direction != facingDirection) {
+			barrel.transform.Rotate(new Vector3(0,0,-barrel.transform.eulerAngles.z*2));
+		}
 		direction = facingDirection;
 		bool flip = direction == Direction.left ? false : true;
 		sRend.flipX = flip;
