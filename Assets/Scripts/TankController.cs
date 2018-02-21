@@ -11,6 +11,7 @@ public class TankController : MonoBehaviour {
 	public Transform exhaustPointLeft;
 	public Transform exhaustPointRight;
 	public GameObject exhaustFumeFrefab;
+	public GameObject barrel;
 
 	private Rigidbody2D rBody;
 	private SpriteRenderer sRend;
@@ -34,17 +35,22 @@ public class TankController : MonoBehaviour {
 		animator.SetFloat("Speed", Mathf.Abs(moveHoriz));
 		exhaustFume.GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(moveHoriz));
 
-		if (moveHoriz > 0) {
-			sRend.flipX = false;
-			direction = Direction.left;
+		if (moveHoriz > 0) {						
+			changeDirrection (Direction.left);
 			displayExhauseFume (exhaustPointLeft);
-		} else if (moveHoriz < 0) {			
-			sRend.flipX = true;	
-			direction = Direction.right;
+		} else if (moveHoriz < 0) {						
+			changeDirrection (Direction.right);
 			displayExhauseFume(exhaustPointRight);
 		} else {
 			exhaustFume.GetComponent<SpriteRenderer> ().enabled = false;
 		}
+	}
+
+	void changeDirrection(Direction facingDirection){
+		direction = facingDirection;
+		bool flip = direction == Direction.left ? false : true;
+		sRend.flipX = flip;
+		barrel.GetComponent<SpriteRenderer> ().flipX = flip;
 	}
 
 	void displayExhauseFume(Transform exhausePoint){
