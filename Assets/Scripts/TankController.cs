@@ -12,6 +12,10 @@ public class TankController : MonoBehaviour {
 	public Transform exhaustPointRight;
 	public GameObject exhaustFumeFrefab;
 	public GameObject barrel;
+	public GameObject bulletFrefab;
+	public Transform shootingPointLeft;
+	public Transform shootingPointRight;
+	public float bulletForce = 700.0f;
 
 	private Rigidbody2D rBody;
 	private SpriteRenderer sRend;
@@ -53,6 +57,17 @@ public class TankController : MonoBehaviour {
 			barrel.transform.Rotate (new Vector3 (0, 0, moveVertical));
 		else 
 			barrel.transform.Rotate (new Vector3 (0, 0, - moveVertical));		
+
+
+		if (Input.GetButtonDown ("Fire1") || Input.GetKeyDown (KeyCode.Space))
+			shoot ();
+	}
+
+	void shoot(){
+		Transform shootingPoint = direction == Direction.left ? shootingPointLeft : shootingPointRight;
+		GameObject bullet = Instantiate (bulletFrefab, shootingPoint.position, shootingPoint.rotation);		
+
+		bullet.GetComponent<Rigidbody2D> ().AddForce (bullet.transform.right * bulletForce);
 	}
 
 	void changeDirrection(Direction facingDirection){
