@@ -13,8 +13,11 @@ public class TankController : MonoBehaviour {
 	public GameObject exhaustFumeFrefab;
 	public GameObject barrel;
 	public GameObject bulletFrefab;
+	public GameObject tankShotFrefab;
 	public Transform shootingPointLeft;
 	public Transform shootingPointRight;
+	public Transform TankShotPositionLeft;
+	public Transform TankShotPositionRight;
 	public float bulletForce = 700.0f;
 
 
@@ -23,6 +26,7 @@ public class TankController : MonoBehaviour {
 	private SpriteRenderer sRend;
 	private Animator animator;
 	private GameObject exhaustFume;
+
 
 	private AudioSource tankMove;
 	private AudioSource tankShoot;
@@ -76,7 +80,10 @@ public class TankController : MonoBehaviour {
 
 	void shoot(){		
 		Transform shootingPoint = direction == Direction.left ? shootingPointLeft : shootingPointRight;
+		Transform tankShotPoint = direction == Direction.left ? TankShotPositionLeft : TankShotPositionRight;
 		GameObject bullet = Instantiate (bulletFrefab, shootingPoint.position, shootingPoint.rotation);		
+		GameObject tankShot = Instantiate (tankShotFrefab, tankShotPoint.position, tankShotPoint.rotation);		
+		Destroy (tankShot, 0.4f);
 		bullet.GetComponent<Rigidbody2D> ().AddForce (bullet.transform.right * bulletForce);
 		tankShoot.Play();
 	}
