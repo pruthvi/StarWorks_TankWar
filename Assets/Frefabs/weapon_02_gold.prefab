@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 212825491118624162}
   - component: {fileID: 50808382712992486}
   - component: {fileID: 60869237459319730}
+  - component: {fileID: 95167934382181008}
+  - component: {fileID: 114478446404640632}
   m_Layer: 0
   m_Name: weapon_02_gold
   m_TagString: Untagged
@@ -101,6 +103,39 @@ PolygonCollider2D:
       - {x: 0.2414043, y: 0.09375373}
       - {x: 0.17958747, y: 0.13638996}
       - {x: 0.08779301, y: 0.17088707}
+--- !u!95 &95167934382181008
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1398167544346390}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114478446404640632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1398167544346390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4be536eb73c489488d27d1ca4654df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosion: {fileID: 1301496295646856, guid: 9488baa0708d941efba808b0680e7851, type: 2}
+  collisionRadius: 0.2
+  WhatToCollideWith:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!212 &212825491118624162
 SpriteRenderer:
   m_ObjectHideFlags: 1
