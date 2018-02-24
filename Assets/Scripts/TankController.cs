@@ -63,7 +63,7 @@ public class TankController : MonoBehaviour {
 			shoot ();
 	}
 
-	void shoot(){
+	void shoot(){		
 		Transform shootingPoint = direction == Direction.left ? shootingPointLeft : shootingPointRight;
 		GameObject bullet = Instantiate (bulletFrefab, shootingPoint.position, shootingPoint.rotation);		
 
