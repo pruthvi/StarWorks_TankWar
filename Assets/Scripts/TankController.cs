@@ -43,10 +43,14 @@ public class TankController : MonoBehaviour {
 		if (moveHoriz > 0) {						
 			changeDirrection (Direction.left);
 			displayExhauseFume (exhaustPointLeft);
+			if (!GetComponent<AudioSource> ().isPlaying) GetComponent<AudioSource> ().Play ();
+			
 		} else if (moveHoriz < 0) {						
 			changeDirrection (Direction.right);
 			displayExhauseFume(exhaustPointRight);
+			if (!GetComponent<AudioSource> ().isPlaying) GetComponent<AudioSource> ().Play ();			
 		} else {
+			if (GetComponent<AudioSource> ().isPlaying) GetComponent<AudioSource> ().Stop ();
 			exhaustFume.GetComponent<SpriteRenderer> ().enabled = false;
 		}
 
