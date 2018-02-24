@@ -29,7 +29,7 @@ public class TankController : MonoBehaviour {
 
 
 	private AudioSource tankMove;
-	private AudioSource tankShoot;
+	private AudioSource barrelMove;
 
 	void Start () {
 		rBody = this.GetComponent<Rigidbody2D>();
@@ -39,7 +39,7 @@ public class TankController : MonoBehaviour {
 
 		AudioSource[] allMyAudioSources = GetComponents<AudioSource>();
 		tankMove = allMyAudioSources[0];
-		tankShoot = allMyAudioSources[1];
+		barrelMove = allMyAudioSources[1];
 	}
 	
 
@@ -72,7 +72,13 @@ public class TankController : MonoBehaviour {
 		if (direction == Direction.left) 
 			barrel.transform.Rotate (new Vector3 (0, 0, moveVertical));
 		else 
-			barrel.transform.Rotate (new Vector3 (0, 0, - moveVertical));		
+			barrel.transform.Rotate (new Vector3 (0, 0, -moveVertical));				
+
+		if (Input.GetKey (KeyCode.UpArrow) || Input.GetKey (KeyCode.DownArrow)) {
+			if (!barrelMove.isPlaying) barrelMove.Play ();			
+		} else {
+			barrelMove.Stop ();
+		}
 
 		if (Input.GetButtonDown ("Fire1") || Input.GetKeyDown (KeyCode.Space))
 			shoot ();
@@ -85,7 +91,6 @@ public class TankController : MonoBehaviour {
 		GameObject tankShot = Instantiate (tankShotFrefab, tankShotPoint.position, tankShotPoint.rotation);		
 		Destroy (tankShot, 0.4f);
 		bullet.GetComponent<Rigidbody2D> ().AddForce (bullet.transform.right * bulletForce);
-		tankShoot.Play();
 	}
 
 	void changeDirrection(Direction facingDirection){
