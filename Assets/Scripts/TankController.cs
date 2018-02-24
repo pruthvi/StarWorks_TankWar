@@ -17,17 +17,25 @@ public class TankController : MonoBehaviour {
 	public Transform shootingPointRight;
 	public float bulletForce = 700.0f;
 
+
+
 	private Rigidbody2D rBody;
 	private SpriteRenderer sRend;
 	private Animator animator;
-
 	private GameObject exhaustFume;
+
+	private AudioSource tankMove;
+	private AudioSource tankShoot;
 
 	void Start () {
 		rBody = this.GetComponent<Rigidbody2D>();
 		sRend = this.GetComponent<SpriteRenderer>();
 		animator = this.GetComponent<Animator>();	
-		exhaustFume = Instantiate (exhaustFumeFrefab, exhaustPointLeft.position, exhaustPointLeft.rotation);		
+		exhaustFume = Instantiate (exhaustFumeFrefab, exhaustPointLeft.position, exhaustPointLeft.rotation);			
+
+		AudioSource[] allMyAudioSources = GetComponents<AudioSource>();
+		tankMove = allMyAudioSources[0];
+		tankShoot = allMyAudioSources[1];
 	}
 	
 
@@ -43,14 +51,14 @@ public class TankController : MonoBehaviour {
 		if (moveHoriz > 0) {						
 			changeDirrection (Direction.left);
 			displayExhauseFume (exhaustPointLeft);
-			if (!GetComponent<AudioSource> ().isPlaying) GetComponent<AudioSource> ().Play ();
+			if (!tankMove.isPlaying) tankMove.Play ();
 			
 		} else if (moveHoriz < 0) {						
 			changeDirrection (Direction.right);
 			displayExhauseFume(exhaustPointRight);
-			if (!GetComponent<AudioSource> ().isPlaying) GetComponent<AudioSource> ().Play ();			
+			if (!tankMove.isPlaying) tankMove.Play ();
 		} else {
-			if (GetComponent<AudioSource> ().isPlaying) GetComponent<AudioSource> ().Stop ();
+			if (tankMove.isPlaying) tankMove.Stop ();
 			exhaustFume.GetComponent<SpriteRenderer> ().enabled = false;
 		}
 
@@ -62,7 +70,6 @@ public class TankController : MonoBehaviour {
 		else 
 			barrel.transform.Rotate (new Vector3 (0, 0, - moveVertical));		
 
-
 		if (Input.GetButtonDown ("Fire1") || Input.GetKeyDown (KeyCode.Space))
 			shoot ();
 	}
@@ -70,8 +77,8 @@ public class TankController : MonoBehaviour {
 	void shoot(){		
 		Transform shootingPoint = direction == Direction.left ? shootingPointLeft : shootingPointRight;
 		GameObject bullet = Instantiate (bulletFrefab, shootingPoint.position, shootingPoint.rotation);		
-
 		bullet.GetComponent<Rigidbody2D> ().AddForce (bullet.transform.right * bulletForce);
+		tankShoot.Play();
 	}
 
 	void changeDirrection(Direction facingDirection){
