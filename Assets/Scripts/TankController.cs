@@ -75,7 +75,8 @@ public class TankController : MonoBehaviour {
 			barrel.transform.Rotate (new Vector3 (0, 0, -moveVertical));				
 
 		if (Input.GetKey (KeyCode.UpArrow) || Input.GetKey (KeyCode.DownArrow)) {
-			if (!barrelMove.isPlaying) barrelMove.Play ();			
+			if (!barrelMove.isPlaying) 
+				barrelMove.Play ();			
 		} else {
 			barrelMove.Stop ();
 		}
@@ -91,6 +92,13 @@ public class TankController : MonoBehaviour {
 		GameObject tankShot = Instantiate (tankShotFrefab, tankShotPoint.position, tankShotPoint.rotation);		
 		Destroy (tankShot, 0.4f);
 		bullet.GetComponent<Rigidbody2D> ().AddForce (bullet.transform.right * bulletForce);
+
+//		bullet.GetComponent<Rigidbody2D> ().velocity += bullet.transform.forward * 500;
+
+//		rigidbody.velocity += transform.forward * MovSpeed;
+				
+//		bullet.transform.Translate(Vector2.right * bulletForce * Time.deltaTime);
+		bullet.GetComponent<Rigidbody2D> ().velocity = Vector2.right * 10 * Time.deltaTime;
 	}
 
 	void changeDirrection(Direction facingDirection){
