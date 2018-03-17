@@ -7,8 +7,10 @@ public class Bullet : MonoBehaviour {
 	public GameObject explosion;
 	public float collisionRadius = 0.1f;
 	public LayerMask WhatToCollideWith;
+	public float damageAmt = 10.0f;
 
 	private bool collided = false;
+	private Collider2D col2D;
 
 	void Start () {
 		
@@ -17,13 +19,21 @@ public class Bullet : MonoBehaviour {
 	//Update is called once per frame
 	void Update () {
 
-		collided = Physics2D.OverlapCircle(gameObject.transform.position, collisionRadius, WhatToCollideWith);
-		if(collided) {			
+		col2D = Physics2D.OverlapCircle(gameObject.transform.position, collisionRadius, WhatToCollideWith);
+		if(col2D != null) {			
 			GameObject ex = Instantiate (explosion, gameObject.transform.position, gameObject.transform.rotation) as GameObject;
 			Destroy (ex, 0.8f);
 			Destroy (gameObject);
+
+			if (col2D.tag == "Enemy") {				
+				col2D.GetComponent<TankHealth> ().Damage (damageAmt);
+			}
 		};	
 	}
+
+//	public void deleteObject(){
+//		Destroy (this.gameObject);
+//	}
 
 //	void OnCollisionEnter(Collision collision)
 //	{

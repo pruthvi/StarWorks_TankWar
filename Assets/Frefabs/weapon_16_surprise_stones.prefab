@@ -93,7 +93,7 @@ MonoBehaviour:
   collisionRadius: 0.2
   WhatToCollideWith:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
 --- !u!212 &212869561580451620
 SpriteRenderer:
   m_ObjectHideFlags: 1

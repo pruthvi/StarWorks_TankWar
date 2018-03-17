@@ -20,7 +20,8 @@ public class TankController : MonoBehaviour {
 	public Transform TankShotPositionRight;
 	public float bulletForce = 700.0f;
 
-
+	//
+	public float weaponDamage = 10.0f;
 
 	private Rigidbody2D rBody;
 	private SpriteRenderer sRend;
@@ -45,7 +46,8 @@ public class TankController : MonoBehaviour {
 
 	void FixedUpdate () {
 		//Moving tank with left/right keys
-		float moveHoriz = Input.GetAxis("Horizontal");
+		float moveHoriz = Input.GetAxis("Horizontal");	
+
 
 		rBody.velocity = new Vector2(moveHoriz * maxSpeed, rBody.velocity.y);	
 
