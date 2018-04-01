@@ -3,7 +3,14 @@ guid: ed23547859c774e0c9929272e0b9aa64
 timeCreated: 1519249478
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: tanks_barrel_4_0
+    21300002: tanks_barrel_4_1
+    21300004: tanks_barrel_4_2
+    21300006: tanks_barrel_4_3
+    21300008: tanks_barrel_4_4
+    21300010: tanks_barrel_4_5
+    21300012: tanks_barrel_4_6
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,7 +47,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -66,9 +73,127 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: tanks_barrel_4_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 204
+        width: 144
+        height: 34
+      alignment: 9
+      pivot: {x: 0.0012193173, y: 0.46799245}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tanks_barrel_4_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 144
+        height: 34
+      alignment: 9
+      pivot: {x: -0.001299777, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tanks_barrel_4_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 136
+        width: 144
+        height: 34
+      alignment: 9
+      pivot: {x: -0.0038188712, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tanks_barrel_4_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 144
+        height: 34
+      alignment: 9
+      pivot: {x: 0.0012193173, y: 0.49999976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tanks_barrel_4_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 144
+        height: 34
+      alignment: 9
+      pivot: {x: -0.001299777, y: 0.48933098}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tanks_barrel_4_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 34
+        width: 144
+        height: 34
+      alignment: 9
+      pivot: {x: -0.001299777, y: 0.5106688}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tanks_barrel_4_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 144
+        height: 34
+      alignment: 9
+      pivot: {x: -0.0038188712, y: 0.49999967}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

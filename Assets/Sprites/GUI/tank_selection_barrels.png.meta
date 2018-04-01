@@ -3,7 +3,35 @@ guid: d2348781fff9e418f9760951f6d7178d
 timeCreated: 1519249476
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: tank_selection_barrels_0
+    21300002: tank_selection_barrels_1
+    21300004: tank_selection_barrels_2
+    21300006: tank_selection_barrels_3
+    21300008: tank_selection_barrels_4
+    21300010: tank_selection_barrels_5
+    21300012: tank_selection_barrels_6
+    21300014: tank_selection_barrels_7
+    21300016: tank_selection_barrels_8
+    21300018: tank_selection_barrels_9
+    21300020: tank_selection_barrels_10
+    21300022: tank_selection_barrels_11
+    21300024: tank_selection_barrels_12
+    21300026: tank_selection_barrels_13
+    21300028: tank_selection_barrels_14
+    21300030: tank_selection_barrels_15
+    21300032: tank_selection_barrels_16
+    21300034: tank_selection_barrels_17
+    21300036: tank_selection_barrels_18
+    21300038: tank_selection_barrels_19
+    21300040: tank_selection_barrels_20
+    21300042: tank_selection_barrels_21
+    21300044: tank_selection_barrels_22
+    21300046: tank_selection_barrels_23
+    21300048: tank_selection_barrels_24
+    21300050: tank_selection_barrels_25
+    21300052: tank_selection_barrels_26
+    21300054: tank_selection_barrels_27
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,7 +68,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -66,9 +94,421 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: tank_selection_barrels_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 612
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_1
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 612
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_2
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 612
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_3
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 612
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 510
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_5
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 510
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_6
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 510
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_7
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 510
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 408
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 408
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_10
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 408
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_11
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 408
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 306
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_13
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 306
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_14
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 306
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_15
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 306
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 204
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_17
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 204
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_18
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 204
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_19
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 204
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 102
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_21
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 102
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_22
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 102
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_23
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 102
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_25
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 0
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_26
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: tank_selection_barrels_27
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 0
+        width: 432
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
