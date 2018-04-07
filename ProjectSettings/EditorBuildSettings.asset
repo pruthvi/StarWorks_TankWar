@@ -8,3 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene1.unity
     guid: c0fa70d15a81c4e9fb45c6a93413e518
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 1a91be08f06f4e243969e3137b7f2efd
+  - enabled: 1
+    path: Assets/Scenes/Select_Tank.unity
+    guid: d114f3778ad5743e4b6176067a25375c

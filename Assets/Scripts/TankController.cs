@@ -54,31 +54,16 @@ public class TankController : MonoBehaviour {
 	
 
 	void FixedUpdate () {
-		//Moving tank with left/right keys
-		float moveHoriz = Input.GetAxis("Horizontal");	
+//		//Moving tank with left/right keys
+//		float moveHoriz = Input.GetAxis("Horizontal");	
+//
+//		move (moveHoriz);
+//		// Moving the barrel with up/down keys
+//		float moveVertical = Input.GetAxis("Vertical");
+//		adjustBarrel (moveVertical);
+	}
 
-		rBody.velocity = new Vector2(moveHoriz * tankConfig.maxSpeed, rBody.velocity.y);	
-
-		animator.SetFloat("Speed", Mathf.Abs(moveHoriz));
-		exhaustFume.GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(moveHoriz));
-
-		if (moveHoriz > 0) {						
-			changeDirrection (Direction.left);
-			displayExhauseFume (positionsConfig.exhaustPointLeft);
-			if (!tankMove.isPlaying) tankMove.Play ();
-			
-		} else if (moveHoriz < 0) {						
-			changeDirrection (Direction.right);
-			displayExhauseFume(positionsConfig.exhaustPointRight);
-			if (!tankMove.isPlaying) tankMove.Play ();
-		} else {
-			if (tankMove.isPlaying) tankMove.Stop ();
-			exhaustFume.GetComponent<SpriteRenderer> ().enabled = false;
-		}
-
-		// Moving the barrel with up/down keys
-		float moveVertical = Input.GetAxis("Vertical");
-
+	public void adjustBarrel(float moveVertical){	
 		if (direction == Direction.left) 
 			barrel.transform.Rotate (new Vector3 (0, 0, moveVertical));
 		else 
@@ -90,12 +75,28 @@ public class TankController : MonoBehaviour {
 		} else {
 			barrelMove.Stop ();
 		}
-
-		if (Input.GetButtonDown ("Fire1") || Input.GetKeyDown (KeyCode.Space))
-			shoot ();
 	}
 
-	void shoot(){		
+	public void move(float moveHoriz){
+		rBody.velocity = new Vector2(moveHoriz * tankConfig.maxSpeed, rBody.velocity.y);	
+		animator.SetFloat("Speed", Mathf.Abs(moveHoriz));
+		exhaustFume.GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(moveHoriz));
+		if (moveHoriz > 0) {						
+			changeDirrection (Direction.left);
+			displayExhauseFume (positionsConfig.exhaustPointLeft);
+			if (!tankMove.isPlaying) tankMove.Play ();
+
+		} else if (moveHoriz < 0) {						
+			changeDirrection (Direction.right);
+			displayExhauseFume(positionsConfig.exhaustPointRight);
+			if (!tankMove.isPlaying) tankMove.Play ();
+		} else {
+			if (tankMove.isPlaying) tankMove.Stop ();
+			exhaustFume.GetComponent<SpriteRenderer> ().enabled = false;
+		}
+	}
+
+	public void shoot(){		
 		Transform shootingPoint = direction == Direction.left ? positionsConfig.shootingPointLeft : positionsConfig.shootingPointRight;
 		Transform tankShotPoint = direction == Direction.left ? positionsConfig.tankShotPositionLeft : positionsConfig.tankShotPositionRight;
 		GameObject bullet = Instantiate (bulletFrefab, shootingPoint.position, shootingPoint.rotation);		
