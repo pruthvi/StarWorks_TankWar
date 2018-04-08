@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour {
 			Destroy (ex, 0.8f);
 			Destroy (gameObject);
 
-			if (col2D.tag == "Enemy") {				
+			if (col2D.tag == "Player") {				
 				col2D.GetComponent<TankHealth> ().Damage (damageAmt);
 			}
 		};	

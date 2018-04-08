@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4397798032614550}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: shootingPointRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4278624219742336}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: exhaustPointRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,7 +50,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4428087568993126}
   - component: {fileID: 212499999816974834}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TankShotPositionLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,7 +65,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224584286013691510}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 224629914582385086}
   - component: {fileID: 222166684840791418}
   - component: {fileID: 114146522370422638}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4891267346830358}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: exhaustPointLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4728401866400506}
   - component: {fileID: 212323309435426092}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: TankShotPositionRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 224523351811343098}
   - component: {fileID: 222777749127326452}
   - component: {fileID: 114328809604787416}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 223395764068375684}
   - component: {fileID: 114395632603143156}
   - component: {fileID: 114005323661488242}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4567098393632502}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: shootingPointLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4063009175561156}
   - component: {fileID: 212164330973515760}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: tanks_barrel_2_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224610247458973802}
   - component: {fileID: 114224038254012310}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,9 +218,9 @@ GameObject:
   - component: {fileID: 95332059749461222}
   - component: {fileID: 82200002034661806}
   - component: {fileID: 82162560121181134}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Tank_2
-  m_TagString: Enemy
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,7 +249,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1998542478105824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.880235, y: 0.77528554, z: -0.15637323}
+  m_LocalPosition: {x: 2.969253, y: -1.9262322, z: -0.15637323}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224156999107100512}
@@ -746,7 +746,6 @@ MonoBehaviour:
     maxSpeed: 10
   direction: 0
   barrel: {fileID: 1838120700706684}
-  bulletForce: 700
 --- !u!114 &114856596416759208
 MonoBehaviour:
   m_ObjectHideFlags: 1
