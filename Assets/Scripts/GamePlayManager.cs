@@ -13,6 +13,8 @@ public class GamePlayManager : MonoBehaviour {
 	public Slider moveSlider;
 	public Text countDownTimer;
 	public float moveTime = 2.0f;
+	public Text currentAngle;
+	public Text previousAngle;
 
 	private int selectedTank;
 	private float currentMoveTime = 0.0f;
@@ -70,7 +72,7 @@ public class GamePlayManager : MonoBehaviour {
 
 		if (Input.GetKeyUp (KeyCode.Space)) {			
 			currentTankController.shoot (shootingForce/2.0f);
-			resetPowerSlider ();
+			loadNextPlayer ();
 		}
 
 
@@ -85,7 +87,7 @@ public class GamePlayManager : MonoBehaviour {
 
 		// adjustBarrel
 		float moveVertical = Input.GetAxis("Vertical");
-		currentTankController.adjustBarrel (moveVertical);
+		currentAngle.text = currentTankController.adjustBarrel (moveVertical).ToString();
 
 		// Move camera following current player
 		mainCamera.transform.position = new Vector3 (currentPlayer.transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z);
@@ -109,18 +111,21 @@ public class GamePlayManager : MonoBehaviour {
 		}
 			
 		if (timeLeft < 0.0f) {			
-			resetPowerSlider ();
+			loadNextPlayer ();
 			timeLeft = turnDuration;
-			turn += 1;
-			currentPlayer = players [turn % players.Count];
 		}
 	}
 
-	void resetPowerSlider(){
+	void loadNextPlayer(){
+		turn += 1;
+		currentPlayer = players [turn % players.Count];
+		currentTankController = currentPlayer.GetComponent<TankController> ();
+		//Set up UI for current player
 		powerbarMoveUp = true;
 		currentMoveTime = 0.0f;
 		shootingForce = 0.0f;
 		powerSlider.value = 0.0f;
 		moveSlider.value = 0.0f;
+		previousAngle.text = currentTankController.barrelAngle.ToString ();
 	}
 }

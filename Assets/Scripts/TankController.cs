@@ -27,7 +27,7 @@ public class TankController : MonoBehaviour {
 
 	public Direction direction = 0;
 	public GameObject barrel;
-
+	public int barrelAngle = 0;
 
 	public int currentWeapon;
 	public string currentWeaponName;
@@ -63,11 +63,13 @@ public class TankController : MonoBehaviour {
 		bulletFrefab = Resources.Load ("Prefabs/"+weaponName) as GameObject;
 	}
 
-	public void adjustBarrel(float moveVertical){	
+	public int adjustBarrel(float moveVertical){	
 		if (direction == Direction.left) 
 			barrel.transform.Rotate (new Vector3 (0, 0, moveVertical));
 		else 
 			barrel.transform.Rotate (new Vector3 (0, 0, -moveVertical));				
+
+
 
 		if (Input.GetKey (KeyCode.UpArrow) || Input.GetKey (KeyCode.DownArrow)) {
 			if (!barrelMove.isPlaying) 
@@ -75,6 +77,14 @@ public class TankController : MonoBehaviour {
 		} else {
 			barrelMove.Stop ();
 		}
+
+		if (direction == Direction.right) {
+			barrelAngle = 90 - Mathf.RoundToInt (barrel.transform.eulerAngles.z % 90);
+		} else {			
+			barrelAngle = Mathf.RoundToInt (barrel.transform.eulerAngles.z % 90);
+		}
+
+		return barrelAngle;
 	}
 
 	public void move(float moveHoriz, float moveTime){

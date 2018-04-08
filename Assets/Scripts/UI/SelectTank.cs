@@ -37,8 +37,7 @@ public class SelectTank : MonoBehaviour {
 		SceneManager.LoadScene("Scene1");
 	}	
 
-	public void displayTank(int selectedTank){
-		Debug.Log (selectedTank);
+	public void displayTank(int selectedTank){		
 		PlayerPrefs.SetInt (variableName, selectedTank);
 		tankBarrel.sprite = (Sprite)barrels [selectedTank];
 		animator.SetInteger ("selectedTank", selectedTank);
