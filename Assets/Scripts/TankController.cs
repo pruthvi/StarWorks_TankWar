@@ -15,6 +15,7 @@ public class PositionsConfig {
 [System.Serializable]
 public class TankConfig {
 	public float maxSpeed = 10f;
+	public float maxMove = 2.0f;
 }
 
 public class TankController : MonoBehaviour {
@@ -27,8 +28,12 @@ public class TankController : MonoBehaviour {
 	public Direction direction = 0;
 	public GameObject barrel;
 
-	private float bulletForce = 1000.0f;
 
+	public int currentWeapon;
+	public string currentWeaponName;
+
+
+	private float bulletForce = 1000.0f;
 	private GameObject bulletFrefab;
 	private GameObject tankShotFrefab;
 	private GameObject exhaustFumeFrefab;
@@ -45,22 +50,17 @@ public class TankController : MonoBehaviour {
 		animator = this.GetComponent<Animator>();	
 		exhaustFumeFrefab = Resources.Load("Prefabs/exhaustFume") as GameObject;
 		tankShotFrefab = Resources.Load ("Prefabs/TankShot") as GameObject;
-		bulletFrefab = Resources.Load ("Prefabs/weapon_16_surprise_stones") as GameObject;
 		exhaustFume = Instantiate (exhaustFumeFrefab, positionsConfig.exhaustPointLeft.position, positionsConfig.exhaustPointLeft.rotation);			
 		AudioSource[] allMyAudioSources = GetComponents<AudioSource>();
 		tankMove = allMyAudioSources[0];
 		barrelMove = allMyAudioSources[1];
+		setWeapon (0);
 	}
-	
 
-	void FixedUpdate () {
-//		//Moving tank with left/right keys
-//		float moveHoriz = Input.GetAxis("Horizontal");	
-//
-//		move (moveHoriz);
-//		// Moving the barrel with up/down keys
-//		float moveVertical = Input.GetAxis("Vertical");
-//		adjustBarrel (moveVertical);
+	public void setWeapon(int index, string weaponName = "weapon_16_surprise_stones"){
+		currentWeapon = index;
+		currentWeaponName = weaponName;
+		bulletFrefab = Resources.Load ("Prefabs/"+weaponName) as GameObject;
 	}
 
 	public void adjustBarrel(float moveVertical){	
@@ -77,19 +77,34 @@ public class TankController : MonoBehaviour {
 		}
 	}
 
-	public void move(float moveHoriz){
-		rBody.velocity = new Vector2(moveHoriz * tankConfig.maxSpeed, rBody.velocity.y);	
-		animator.SetFloat("Speed", Mathf.Abs(moveHoriz));
-		exhaustFume.GetComponent<Animator>().SetFloat("Speed", Mathf.Abs(moveHoriz));
+	public void move(float moveHoriz, float moveTime){
+		bool moving = moveTime < tankConfig.maxMove;
+
+		if (moving) {
+			rBody.velocity = new Vector2 (moveHoriz * tankConfig.maxSpeed, rBody.velocity.y);	
+			animator.SetFloat ("Speed", Mathf.Abs (moveHoriz));
+			exhaustFume.GetComponent<Animator> ().SetFloat ("Speed", Mathf.Abs (moveHoriz));
+		} else {
+			animator.SetFloat ("Speed", 0.0f);
+			exhaustFume.GetComponent<Animator> ().SetFloat ("Speed", 0.0f);
+		}
+
+
 		if (moveHoriz > 0) {						
 			changeDirrection (Direction.left);
-			displayExhauseFume (positionsConfig.exhaustPointLeft);
-			if (!tankMove.isPlaying) tankMove.Play ();
+			if (moving) {
+				displayExhauseFume (positionsConfig.exhaustPointLeft);
+				if (!tankMove.isPlaying) tankMove.Play ();
+			}
+
 
 		} else if (moveHoriz < 0) {						
 			changeDirrection (Direction.right);
-			displayExhauseFume(positionsConfig.exhaustPointRight);
-			if (!tankMove.isPlaying) tankMove.Play ();
+			if (moving) {
+				displayExhauseFume (positionsConfig.exhaustPointRight);
+				if (!tankMove.isPlaying)
+					tankMove.Play ();
+			}
 		} else {
 			if (tankMove.isPlaying) tankMove.Stop ();
 			exhaustFume.GetComponent<SpriteRenderer> ().enabled = false;

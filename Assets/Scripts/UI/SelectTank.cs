@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class SelectTank : MonoBehaviour {
 
 	private AudioSource audioSource;
-	private bool isPlaying = false;
 	private Animator animator;
 	public int selectedTank = 0;
 
@@ -50,9 +49,7 @@ public class SelectTank : MonoBehaviour {
 		}
 	}
 
-	void PlaySound(){
-		if (!isPlaying) {
-			audioSource.Play ();
-		}
+	void PlaySound(){		
+		audioSource.Play ();
 	}
 }

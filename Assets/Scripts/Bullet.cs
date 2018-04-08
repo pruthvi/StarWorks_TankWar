@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour {
 	public LayerMask WhatToCollideWith;
 	public float damageAmt = 10.0f;
 
-	private bool collided = false;
+	//private bool collided = false;
 	private Collider2D col2D;
 
 	void Start () {
