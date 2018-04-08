@@ -27,7 +27,7 @@ public class TankController : MonoBehaviour {
 	public Direction direction = 0;
 	public GameObject barrel;
 
-	public float bulletForce = 700.0f;
+	private float bulletForce = 1000.0f;
 
 	private GameObject bulletFrefab;
 	private GameObject tankShotFrefab;
@@ -96,14 +96,14 @@ public class TankController : MonoBehaviour {
 		}
 	}
 
-	public void shoot(){		
+	public void shoot(float power){		
 		Transform shootingPoint = direction == Direction.left ? positionsConfig.shootingPointLeft : positionsConfig.shootingPointRight;
 		Transform tankShotPoint = direction == Direction.left ? positionsConfig.tankShotPositionLeft : positionsConfig.tankShotPositionRight;
 		GameObject bullet = Instantiate (bulletFrefab, shootingPoint.position, shootingPoint.rotation);		
 		GameObject tankShot = Instantiate (tankShotFrefab, tankShotPoint.position, tankShotPoint.rotation);		
 		Destroy (tankShot, 0.4f);
-		bullet.GetComponent<Rigidbody2D> ().AddForce (bullet.transform.right * bulletForce);
-		bullet.GetComponent<Rigidbody2D> ().velocity = Vector2.right * 10 * Time.deltaTime;
+		bullet.GetComponent<Rigidbody2D> ().AddForce (bullet.transform.right * bulletForce * power);
+		//bullet.GetComponent<Rigidbody2D> ().velocity = Vector2.right * 10 * Time.deltaTime;
 	}
 
 	void changeDirrection(Direction facingDirection){

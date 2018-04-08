@@ -13,6 +13,7 @@ public class GamePlayManager : MonoBehaviour {
 	private GameObject player1;
 
 	public List<GameObject> players;
+	public Slider powerSlider;
 
 	public Text countDownTimer;
 	public Transform[] spawnPositions;
@@ -22,7 +23,7 @@ public class GamePlayManager : MonoBehaviour {
 	private TankController currentTankController;
 
 	private int turn = 0;
-
+	private float shootingForce = 0.0f;
 	// Use this for initialization
 	void Start () {
 		string frefab;
@@ -30,13 +31,13 @@ public class GamePlayManager : MonoBehaviour {
 			selectedTank = PlayerPrefs.GetInt ("Player" + i.ToString() + "_Tank");
 			if (selectedTank > 0) {
 				frefab = "Prefabs/Tank_" + selectedTank;
-				Debug.Log (frefab);
 				GameObject tank1Prefab = Resources.Load(frefab) as GameObject;
-
 				player1 = Instantiate (tank1Prefab, spawnPositions[i-1].position, spawnPositions[i-1].rotation);			
 				players.Add (player1);
 			}
 		}
+
+		powerSlider.value = 0.0f;
 
 		currentPlayer = players [0];
 		countDownTimer.text = timeLeft.ToString();
@@ -49,8 +50,21 @@ public class GamePlayManager : MonoBehaviour {
 		currentTankController = currentPlayer.GetComponent<TankController> ();
 
 		// Shoot
-		if (Input.GetButtonDown ("Fire1") || Input.GetKeyDown (KeyCode.Space))
-			currentTankController.shoot ();
+//		if (Input.GetButtonDown ("Fire1") || Input.GetKeyDown (KeyCode.Space))
+//			currentTankController.shoot ();
+
+		if (Input.GetKey(KeyCode.Space)){
+			shootingForce += Time.deltaTime;
+		
+			powerSlider.value = shootingForce / 2.0f;
+		}
+
+		if (Input.GetKeyUp (KeyCode.Space)) {			
+			currentTankController.shoot (shootingForce/2.0f);
+			resetPowerSlider ();
+		}
+
+
 		// Move
 		float moveHoriz = Input.GetAxis("Horizontal");	
 		currentTankController.move (moveHoriz);
@@ -74,11 +88,17 @@ public class GamePlayManager : MonoBehaviour {
 		} else {
 			countDownTimer.color = Color.red;
 		}
-
-		if (timeLeft < 0.0f) {
+			
+		if (timeLeft < 0.0f) {			
+			resetPowerSlider ();
 			timeLeft = turnDuration;
 			turn += 1;
 			currentPlayer = players [turn % players.Count];
 		}
+	}
+
+	void resetPowerSlider(){
+		shootingForce = 0.0f;
+		powerSlider.value = 0.0f;
 	}
 }
