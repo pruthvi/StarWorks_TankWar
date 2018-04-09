@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ExplosionController : MonoBehaviour {
 
-	public GameObject gameManager;
-	private GamePlayManager gamePlayManger;
+	private GameObject gameManager;
+	private GamePlayManager gamePlayManager;
 	void Start () {
-		gamePlayManger = gameManager.GetComponent<GamePlayManager> ();
+		gameManager = GameObject.Find("GameManager");
+		gamePlayManager = gameManager.GetComponent<GamePlayManager> ();
 	}
 	
 	// Update is called once per frame
@@ -16,7 +17,8 @@ public class ExplosionController : MonoBehaviour {
 	}
 
 	public void deleteObject(){
+		gamePlayManager.loadNextPlayer ();
 		Destroy (this.gameObject);
-		gamePlayManger.loadNextPlayer ();
+
 	}
 }

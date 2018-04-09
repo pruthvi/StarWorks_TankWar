@@ -31,21 +31,8 @@ public class GamePlayManager : MonoBehaviour {
 
 	public static GamePlayManager instance = null;
 
-	void Awake(){
-		if (instance == null)
-			instance = this;
-		else if (instance != this)
-			Destroy (gameObject);
-		DontDestroyOnLoad (gameObject);
-		InitGame ();
-	}
-
-//	void InitGame(){
-//
-//	}
-
 	// Use this for initialization
-	void InitGame () {
+	void Start () {
 		string frefab;
 		for (int i = 1; i < 5; i++) {
 			selectedTank = PlayerPrefs.GetInt ("Player" + i.ToString() + "_Tank");
