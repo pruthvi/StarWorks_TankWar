@@ -249,7 +249,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1998542478105824}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.969253, y: -1.9262322, z: -0.15637323}
+  m_LocalPosition: {x: 3.4886324, y: -1.9589666, z: -0.15637323}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224156999107100512}
@@ -744,8 +744,16 @@ MonoBehaviour:
     tankShotPositionRight: {fileID: 4728401866400506}
   tankConfig:
     maxSpeed: 10
+    maxMove: 2
   direction: 0
   barrel: {fileID: 1838120700706684}
+  barrelAngle: 0
+  currentWeapon: 0
+  currentWeaponName: 
+  maxHealth: 100
+  healthBar: {fileID: 114224038254012310}
+  die: 0
+  currentHealth: 0
 --- !u!114 &114856596416759208
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class PositionsConfig {
@@ -22,17 +23,18 @@ public class TankController : MonoBehaviour {
 
 	public PositionsConfig positionsConfig;
 	public TankConfig tankConfig;
-
 	public enum Direction {left, right };
-
 	public Direction direction = 0;
 	public GameObject barrel;
 	public int barrelAngle = 0;
-
 	public int currentWeapon;
 	public string currentWeaponName;
+	public float maxHealth = 100;
+	public Slider healthBar;
+	public bool die = false;
+	public string name;
 
-
+	public float currentHealth;
 	private float bulletForce = 1000.0f;
 	private GameObject bulletFrefab;
 	private GameObject tankShotFrefab;
@@ -55,6 +57,24 @@ public class TankController : MonoBehaviour {
 		tankMove = allMyAudioSources[0];
 		barrelMove = allMyAudioSources[1];
 		setWeapon (0);
+		currentHealth = maxHealth;	
+		UpdateHealth ();
+	}
+
+	void UpdateHealth(){
+		if (currentHealth <= 0) {
+			currentHealth = 0;
+			die = true;
+		}
+		
+		healthBar.value = currentHealth / maxHealth;
+		
+	}
+
+	public void Damage (float damageAmt) {
+		currentHealth -= damageAmt;
+		//update heathbar slider
+		UpdateHealth();
 	}
 
 	public void setWeapon(int index, string weaponName = "weapon_16_surprise_stones"){

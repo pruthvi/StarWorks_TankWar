@@ -104,7 +104,6 @@ GameObject:
   - component: {fileID: 114488762935989370}
   - component: {fileID: 82275641889364050}
   - component: {fileID: 82729268621002586}
-  - component: {fileID: 114854555167696594}
   m_Layer: 9
   m_Name: Tank_1
   m_TagString: Player
@@ -156,7 +155,7 @@ GameObject:
   - component: {fileID: 114826735494101242}
   - component: {fileID: 114149843138342480}
   m_Layer: 9
-  m_Name: Canvas (1)
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -264,7 +263,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1426637944690686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3192115, y: -2.2674837, z: 0.20941377}
+  m_LocalPosition: {x: 0.7391503, y: -1.1103605, z: 0.20941377}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224312006954679760}
@@ -709,8 +708,15 @@ MonoBehaviour:
     tankShotPositionRight: {fileID: 4554148199114476}
   tankConfig:
     maxSpeed: 10
+    maxMove: 2
   direction: 0
   barrel: {fileID: 1919123713132048}
+  barrelAngle: 0
+  currentWeapon: 0
+  currentWeaponName: 
+  maxHealth: 100
+  healthBar: {fileID: 114463404717804334}
+  die: 0
 --- !u!114 &114826735494101242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -732,19 +738,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &114854555167696594
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1426637944690686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1ba8daf48984bf6a61ce7bd969710f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  healthBar: {fileID: 114463404717804334}
 --- !u!212 &212020138667460856
 SpriteRenderer:
   m_ObjectHideFlags: 1

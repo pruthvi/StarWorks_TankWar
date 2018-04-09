@@ -15,7 +15,8 @@ public class GamePlayManager : MonoBehaviour {
 	public float moveTime = 2.0f;
 	public Text currentAngle;
 	public Text previousAngle;
-
+	public Canvas winCanvas;
+	public Text winner;
 	private int selectedTank;
 	private float currentMoveTime = 0.0f;
 
@@ -28,17 +29,32 @@ public class GamePlayManager : MonoBehaviour {
 	private float shootingForce = 0.0f;
 	private bool powerbarMoveUp = true;
 
+	public static GamePlayManager instance = null;
+
+	void Awake(){
+		if (instance == null)
+			instance = this;
+		else if (instance != this)
+			Destroy (gameObject);
+		DontDestroyOnLoad (gameObject);
+		InitGame ();
+	}
+
+//	void InitGame(){
+//
+//	}
 
 	// Use this for initialization
-	void Start () {
+	void InitGame () {
 		string frefab;
-		for (int i = 1; i < 4; i++) {
+		for (int i = 1; i < 5; i++) {
 			selectedTank = PlayerPrefs.GetInt ("Player" + i.ToString() + "_Tank");
 			if (selectedTank > 0) {
 				frefab = "Prefabs/Tank_" + selectedTank;
 				GameObject tank1Prefab = Resources.Load(frefab) as GameObject;
 				GameObject player1 = Instantiate (tank1Prefab, spawnPositions[i-1].position, spawnPositions[i-1].rotation);			
 				players.Add (player1);
+				player1.GetComponent<TankController> ().name = "Player" + i.ToString ();
 			}
 		}
 
@@ -53,6 +69,21 @@ public class GamePlayManager : MonoBehaviour {
 	void Update () {
 
 		currentTankController = currentPlayer.GetComponent<TankController> ();
+
+		foreach (GameObject player in players) {
+			TankController tankcontroller = player.GetComponent<TankController> ();
+			if (tankcontroller.die) {	
+				players.Remove (player);
+				Destroy (player);	
+			}
+		}
+
+		if (players.Count == 1) {
+			winCanvas.enabled = true;
+			Time.timeScale = 0;
+			winner.text = currentTankController.name + " win";
+		}
+
 
 		// Shoot
 		if (Input.GetKey(KeyCode.Space)){
@@ -72,7 +103,6 @@ public class GamePlayManager : MonoBehaviour {
 
 		if (Input.GetKeyUp (KeyCode.Space)) {			
 			currentTankController.shoot (shootingForce/2.0f);
-			loadNextPlayer ();
 		}
 
 
@@ -112,12 +142,12 @@ public class GamePlayManager : MonoBehaviour {
 			
 		if (timeLeft < 0.0f) {			
 			loadNextPlayer ();
-			timeLeft = turnDuration;
 		}
 	}
 
-	void loadNextPlayer(){
+	public void loadNextPlayer(){		
 		turn += 1;
+		timeLeft = turnDuration;
 		currentPlayer = players [turn % players.Count];
 		currentTankController = currentPlayer.GetComponent<TankController> ();
 		//Set up UI for current player
@@ -127,5 +157,9 @@ public class GamePlayManager : MonoBehaviour {
 		powerSlider.value = 0.0f;
 		moveSlider.value = 0.0f;
 		previousAngle.text = currentTankController.barrelAngle.ToString ();
+	}
+
+	public void pauseButton(){
+
 	}
 }

@@ -22,18 +22,14 @@ public class Bullet : MonoBehaviour {
 		col2D = Physics2D.OverlapCircle(gameObject.transform.position, collisionRadius, WhatToCollideWith);
 		if(col2D != null) {			
 			GameObject ex = Instantiate (explosion, gameObject.transform.position, gameObject.transform.rotation) as GameObject;
-			Destroy (ex, 0.8f);
+			//Destroy (ex, 0.8f);
 			Destroy (gameObject);
 
 			if (col2D.tag == "Player") {				
-				col2D.GetComponent<TankHealth> ().Damage (damageAmt);
+				col2D.GetComponent<TankController> ().Damage (damageAmt);
 			}
 		};	
 	}
-
-//	public void deleteObject(){
-//		Destroy (this.gameObject);
-//	}
 
 //	void OnCollisionEnter(Collision collision)
 //	{

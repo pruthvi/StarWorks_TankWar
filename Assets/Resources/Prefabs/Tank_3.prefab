@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 114626054327352926}
   - component: {fileID: 114615270884603392}
   m_Layer: 9
-  m_Name: Canvas (1)
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,7 +259,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1614287231146590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.2298899, y: -0.89749956, z: 0.18193804}
+  m_LocalPosition: {x: 6.5775585, y: -0.6690855, z: 0.18193804}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224607125450250176}
@@ -669,8 +669,16 @@ MonoBehaviour:
     tankShotPositionRight: {fileID: 4045340729589298}
   tankConfig:
     maxSpeed: 10
+    maxMove: 2
   direction: 0
   barrel: {fileID: 1213897652624696}
+  barrelAngle: 0
+  currentWeapon: 0
+  currentWeaponName: 
+  maxHealth: 100
+  healthBar: {fileID: 114435051746663218}
+  die: 0
+  currentHealth: 0
 --- !u!114 &114435051746663218
 MonoBehaviour:
   m_ObjectHideFlags: 1
