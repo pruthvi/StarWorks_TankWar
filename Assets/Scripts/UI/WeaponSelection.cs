@@ -54,4 +54,14 @@ public class WeaponSelection : MonoBehaviour {
 			}
 		}
 	}
+
+	public void setWeapon(int index){		
+		for(int i=0; i<4; i++){
+			if (i == index) {				
+				weapons[i].wrapper.transform.Find ("background").GetComponent<SpriteRenderer> ().sprite = weaponBackgrounds [1];
+			} else {
+				weapons[i].wrapper.transform.Find ("background").GetComponent<SpriteRenderer> ().sprite = weaponBackgrounds [0];
+			}
+		}
+	}
 }

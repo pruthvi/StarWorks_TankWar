@@ -17,15 +17,14 @@ public class GamePlayManager : MonoBehaviour {
 	public Text previousAngle;
 	public Canvas winCanvas;
 	public Text winner;
+	public Transform[] spawnPositions;
+	public WeaponSelection weaponSelection;
+
 	private int selectedTank;
 	private float currentMoveTime = 0.0f;
-
-	public Transform[] spawnPositions;
-
 	private float timeLeft;
 	private TankController currentTankController;
-
-	private int turn = 0;
+	private int turn = -1;
 	private float shootingForce = 0.0f;
 	private bool powerbarMoveUp = true;
 
@@ -47,7 +46,7 @@ public class GamePlayManager : MonoBehaviour {
 
 		powerSlider.value = 0.0f;
 
-		currentPlayer = players [0];
+		loadNextPlayer ();
 		countDownTimer.text = timeLeft.ToString();
 		timeLeft = turnDuration;
 	}
@@ -135,8 +134,12 @@ public class GamePlayManager : MonoBehaviour {
 	public void loadNextPlayer(){		
 		turn += 1;
 		timeLeft = turnDuration;
+		if (currentTankController != null)
+			currentTankController.active = false;
+		
 		currentPlayer = players [turn % players.Count];
 		currentTankController = currentPlayer.GetComponent<TankController> ();
+		currentTankController.active = true;
 		//Set up UI for current player
 		powerbarMoveUp = true;
 		currentMoveTime = 0.0f;
@@ -144,9 +147,6 @@ public class GamePlayManager : MonoBehaviour {
 		powerSlider.value = 0.0f;
 		moveSlider.value = 0.0f;
 		previousAngle.text = currentTankController.barrelAngle.ToString ();
-	}
-
-	public void pauseButton(){
-
+		weaponSelection.setWeapon (currentTankController.currentWeapon);
 	}
 }

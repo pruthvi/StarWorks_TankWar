@@ -33,6 +33,7 @@ public class TankController : MonoBehaviour {
 	public Slider healthBar;
 	public bool die = false;
 	public string name;
+	public bool active = false;
 
 	public float currentHealth;
 	private float bulletForce = 1000.0f;
@@ -71,6 +72,16 @@ public class TankController : MonoBehaviour {
 		
 	}
 
+	void Update(){
+		if (!active) {
+			tankMove.Stop ();
+			barrelMove.Stop();
+			animator.SetFloat ("Speed", 0);
+			exhaustFume.GetComponent<Animator> ().SetFloat ("Speed", 0);
+			exhaustFume.GetComponent<SpriteRenderer> ().enabled = false;
+		}
+	}
+
 	public void Damage (float damageAmt) {
 		currentHealth -= damageAmt;
 		//update heathbar slider
@@ -84,64 +95,69 @@ public class TankController : MonoBehaviour {
 	}
 
 	public int adjustBarrel(float moveVertical){	
-		if (direction == Direction.left) 
-			barrel.transform.Rotate (new Vector3 (0, 0, moveVertical));
-		else 
-			barrel.transform.Rotate (new Vector3 (0, 0, -moveVertical));				
+		if (active) {
+			if (direction == Direction.left)
+				barrel.transform.Rotate (new Vector3 (0, 0, moveVertical));
+			else
+				barrel.transform.Rotate (new Vector3 (0, 0, -moveVertical));				
 
 
 
-		if (Input.GetKey (KeyCode.UpArrow) || Input.GetKey (KeyCode.DownArrow)) {
-			if (!barrelMove.isPlaying) 
-				barrelMove.Play ();			
-		} else {
-			barrelMove.Stop ();
+			if (Input.GetKey (KeyCode.UpArrow) || Input.GetKey (KeyCode.DownArrow)) {
+				if (!barrelMove.isPlaying)
+					barrelMove.Play ();			
+			} else {
+				barrelMove.Stop ();
+			}
+
+			if (direction == Direction.right) {
+				barrelAngle = 90 - Mathf.RoundToInt (barrel.transform.eulerAngles.z % 90);
+			} else {			
+				barrelAngle = Mathf.RoundToInt (barrel.transform.eulerAngles.z % 90);
+			}
 		}
-
-		if (direction == Direction.right) {
-			barrelAngle = 90 - Mathf.RoundToInt (barrel.transform.eulerAngles.z % 90);
-		} else {			
-			barrelAngle = Mathf.RoundToInt (barrel.transform.eulerAngles.z % 90);
-		}
-
 		return barrelAngle;
 	}
 
 	public void move(float moveHoriz, float moveTime){
-		bool moving = moveTime < tankConfig.maxMove;
+		if (active) {
+			bool moving = moveTime < tankConfig.maxMove;
 
-		if (moving) {
-			rBody.velocity = new Vector2 (moveHoriz * tankConfig.maxSpeed, rBody.velocity.y);	
-			animator.SetFloat ("Speed", Mathf.Abs (moveHoriz));
-			exhaustFume.GetComponent<Animator> ().SetFloat ("Speed", Mathf.Abs (moveHoriz));
-		} else {
-			animator.SetFloat ("Speed", 0.0f);
-			exhaustFume.GetComponent<Animator> ().SetFloat ("Speed", 0.0f);
-		}
-
-
-		if (moveHoriz > 0) {						
-			changeDirrection (Direction.left);
 			if (moving) {
-				displayExhauseFume (positionsConfig.exhaustPointLeft);
-				if (!tankMove.isPlaying) tankMove.Play ();
+				rBody.velocity = new Vector2 (moveHoriz * tankConfig.maxSpeed, rBody.velocity.y);	
+				animator.SetFloat ("Speed", Mathf.Abs (moveHoriz));
+				exhaustFume.GetComponent<Animator> ().SetFloat ("Speed", Mathf.Abs (moveHoriz));
+			} else {
+				animator.SetFloat ("Speed", 0.0f);
+				exhaustFume.GetComponent<Animator> ().SetFloat ("Speed", 0.0f);
 			}
 
 
-		} else if (moveHoriz < 0) {						
-			changeDirrection (Direction.right);
-			if (moving) {
-				displayExhauseFume (positionsConfig.exhaustPointRight);
-				if (!tankMove.isPlaying)
-					tankMove.Play ();
+			if (moveHoriz > 0) {						
+				changeDirrection (Direction.left);
+				if (moving) {
+					displayExhauseFume (positionsConfig.exhaustPointLeft);
+					if (!tankMove.isPlaying)
+						tankMove.Play ();
+				}
+
+
+			} else if (moveHoriz < 0) {						
+				changeDirrection (Direction.right);
+				if (moving) {
+					displayExhauseFume (positionsConfig.exhaustPointRight);
+					if (!tankMove.isPlaying)
+						tankMove.Play ();
+				}
+			} else {
+				if (tankMove.isPlaying)
+					tankMove.Stop ();
+				exhaustFume.GetComponent<SpriteRenderer> ().enabled = false;
 			}
-		} else {
-			if (tankMove.isPlaying) tankMove.Stop ();
-			exhaustFume.GetComponent<SpriteRenderer> ().enabled = false;
-		}
+		} 
 	}
 
-	public void shoot(float power){		
+	public void shoot(float power){				
 		Transform shootingPoint = direction == Direction.left ? positionsConfig.shootingPointLeft : positionsConfig.shootingPointRight;
 		Transform tankShotPoint = direction == Direction.left ? positionsConfig.tankShotPositionLeft : positionsConfig.tankShotPositionRight;
 		GameObject bullet = Instantiate (bulletFrefab, shootingPoint.position, shootingPoint.rotation);		
