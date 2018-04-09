@@ -3278,7 +3278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPlayer: {fileID: 0}
   mainCamera: {fileID: 1113793926}
-  turnDuration: 10
+  turnDuration: 15
   players: []
   powerSlider: {fileID: 1452940745}
   moveSlider: {fileID: 1358533320}
@@ -3293,6 +3293,7 @@ MonoBehaviour:
   - {fileID: 1804843402}
   - {fileID: 1702393737}
   - {fileID: 975692648}
+  weaponSelection: {fileID: 861950593}
 --- !u!4 &987325894
 Transform:
   m_ObjectHideFlags: 0
@@ -3938,6 +3939,16 @@ Prefab:
     - target: {fileID: 1387191477790452, guid: f1f4ff39d48da4bde978fdf2e751dfdd, type: 2}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 114807293124850554, guid: f1f4ff39d48da4bde978fdf2e751dfdd,
+        type: 2}
+      propertyPath: weaponSelection
+      value: 
+      objectReference: {fileID: 861950593}
+    - target: {fileID: 114807293124850554, guid: f1f4ff39d48da4bde978fdf2e751dfdd,
+        type: 2}
+      propertyPath: turnDuration
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1f4ff39d48da4bde978fdf2e751dfdd, type: 2}
