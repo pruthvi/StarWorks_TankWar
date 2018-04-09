@@ -6,6 +6,7 @@ public class ExplosionController : MonoBehaviour {
 
 	private GameObject gameManager;
 	private GamePlayManager gamePlayManager;
+
 	void Start () {
 		gameManager = GameObject.Find("GameManager");
 		gamePlayManager = gameManager.GetComponent<GamePlayManager> ();
@@ -17,8 +18,8 @@ public class ExplosionController : MonoBehaviour {
 	}
 
 	public void deleteObject(){
+		
 		gamePlayManager.loadNextPlayer ();
 		Destroy (this.gameObject);
-
 	}
 }

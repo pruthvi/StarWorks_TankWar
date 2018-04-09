@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour {
 		col2D = Physics2D.OverlapCircle(gameObject.transform.position, collisionRadius, WhatToCollideWith);
 		if(col2D != null) {			
 			GameObject ex = Instantiate (explosion, gameObject.transform.position, gameObject.transform.rotation) as GameObject;
-			//Destroy (ex, 0.8f);
+
 			Destroy (gameObject);
 
 			if (col2D.tag == "Player") {				

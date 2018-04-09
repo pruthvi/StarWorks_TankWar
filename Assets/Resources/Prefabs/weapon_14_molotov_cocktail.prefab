@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1866353608844742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8273929, y: 0.13138136, z: 0}
+  m_LocalPosition: {x: 6.829788, y: -1.7581415, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -134,7 +134,8 @@ MonoBehaviour:
   collisionRadius: 0.25
   WhatToCollideWith:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
+  damageAmt: 10
 --- !u!212 &212943102167880566
 SpriteRenderer:
   m_ObjectHideFlags: 1
