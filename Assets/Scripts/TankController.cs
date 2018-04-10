@@ -35,6 +35,13 @@ public class TankController : MonoBehaviour {
 	public string name;
 	public bool active = false;
 
+	//--------------------------
+	public GameObject frontWheel;
+	private Collider2D col2D;
+	public LayerMask level;
+	public float collisionRadius = 0.1f;
+	//--------------------------
+
 	public float currentHealth;
 	private float bulletForce = 1000.0f;
 	private GameObject bulletFrefab;
@@ -46,6 +53,8 @@ public class TankController : MonoBehaviour {
 	private GameObject exhaustFume;
 	private AudioSource tankMove;
 	private AudioSource barrelMove;
+
+	private Vector3 v3 = new Vector3(1,1,0);
 
 	void Start () {
 		rBody = this.GetComponent<Rigidbody2D>();
@@ -72,7 +81,15 @@ public class TankController : MonoBehaviour {
 		
 	}
 
+	void OnDrawGizmosSelected() {
+		Gizmos.color = Color.yellow;
+		Gizmos.DrawSphere(frontWheel.transform.position, collisionRadius);
+
+		Gizmos.DrawRay(frontWheel.transform.position, v3*10);
+	}
+
 	void Update(){
+		
 		if (!active) {
 			tankMove.Stop ();
 			barrelMove.Stop();
@@ -121,12 +138,46 @@ public class TankController : MonoBehaviour {
 
 	public void move(float moveHoriz, float moveTime){
 		if (active) {
-			bool moving = moveTime < tankConfig.maxMove;
+			bool can_move = moveTime < tankConfig.maxMove;
 
-			if (moving) {
-				rBody.velocity = new Vector2 (moveHoriz * tankConfig.maxSpeed, rBody.velocity.y);	
+
+
+			if (can_move) {
+
+
+//				if (transform.rotation.z > 0) {
+//					rBody.velocity = new Vector2 (moveHoriz * tankConfig.maxSpeed, rBody.velocity.y);	
+//				} else {
+//					rBody.velocity = new Vector2 (moveHoriz * tankConfig.maxSpeed, rBody.velocity.y);	
+//				}
+
+				Vector3 v3 = new Vector3 ();
+				Vector2 v2 = new Vector2 ();
+
+				v3 = new Vector3(1,0,0);
+				v2 += Vector2.right;
+
 				animator.SetFloat ("Speed", Mathf.Abs (moveHoriz));
 				exhaustFume.GetComponent<Animator> ().SetFloat ("Speed", Mathf.Abs (moveHoriz));
+
+
+				col2D = Physics2D.OverlapCircle(frontWheel.transform.position, collisionRadius, level);
+				if (col2D != null) {							
+					sRend.color = Color.red;
+//					while (col2D != null) {
+//						gameObject.transform.Rotate (new Vector3 (0, 0, gameObject.transform.rotation.z + 0.1f));
+//						col2D = Physics2D.OverlapCircle(frontWheel.transform.position, collisionRadius, level);
+//					}
+					v3 = new Vector3(1,1,0);
+				
+					transform.Translate (moveHoriz * tankConfig.maxSpeed * v3.normalized * Time.deltaTime);
+				} else {
+					sRend.color = Color.white;
+					rBody.velocity = new Vector2 (moveHoriz * tankConfig.maxSpeed, rBody.velocity.y);	
+					transform.Translate (moveHoriz * tankConfig.maxSpeed * v3.normalized * Time.deltaTime);
+				}
+
+
 			} else {
 				animator.SetFloat ("Speed", 0.0f);
 				exhaustFume.GetComponent<Animator> ().SetFloat ("Speed", 0.0f);
@@ -135,7 +186,7 @@ public class TankController : MonoBehaviour {
 
 			if (moveHoriz > 0) {						
 				changeDirrection (Direction.left);
-				if (moving) {
+				if (can_move) {
 					displayExhauseFume (positionsConfig.exhaustPointLeft);
 					if (!tankMove.isPlaying)
 						tankMove.Play ();
@@ -144,7 +195,7 @@ public class TankController : MonoBehaviour {
 
 			} else if (moveHoriz < 0) {						
 				changeDirrection (Direction.right);
-				if (moving) {
+				if (can_move) {
 					displayExhauseFume (positionsConfig.exhaustPointRight);
 					if (!tankMove.isPlaying)
 						tankMove.Play ();

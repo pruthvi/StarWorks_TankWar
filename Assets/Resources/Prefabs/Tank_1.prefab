@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 114488762935989370}
   - component: {fileID: 82275641889364050}
   - component: {fileID: 82729268621002586}
+  - component: {fileID: 58309031561468752}
   m_Layer: 9
   m_Name: Tank_1
   m_TagString: Player
@@ -122,6 +123,21 @@ GameObject:
   - component: {fileID: 212675832620386236}
   m_Layer: 9
   m_Name: exhaustPointLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1733477215226978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4604985926366198}
+  m_Layer: 9
+  m_Name: frontWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -263,13 +279,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1426637944690686}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2463042, y: -1.5969555, z: 0.20941377}
+  m_LocalPosition: {x: -3.798, y: -3.375, z: 0.20941377}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224312006954679760}
   - {fileID: 4032951194949576}
   - {fileID: 4962408166189088}
   - {fileID: 4568320214413782}
+  - {fileID: 4604985926366198}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -312,6 +329,19 @@ Transform:
   m_Father: {fileID: 4424520209860280}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4604985926366198
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1733477215226978}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.639, y: -0.563, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4424520209860280}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4615765788619668
 Transform:
   m_ObjectHideFlags: 1
@@ -349,15 +379,30 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1000
+  m_Mass: 10000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 20
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
+--- !u!58 &58309031561468752
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1426637944690686}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.50954354, y: -0.3591025}
+  serializedVersion: 2
+  m_Radius: 0.23883617
 --- !u!60 &60132933317212792
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -387,11 +432,11 @@ PolygonCollider2D:
       - {x: -0.15524124, y: 0.54306394}
       - {x: -0.7069752, y: 0.044393767}
       - {x: -0.7233403, y: -0.5165913}
-      - {x: -0.65612775, y: -0.61044323}
-      - {x: 0.55790085, y: -0.61044323}
-      - {x: 0.7074185, y: -0.5387092}
-      - {x: 0.7623416, y: -0.35000595}
-      - {x: 0.7426207, y: -0.12209907}
+      - {x: -0.6172533, y: -0.60801363}
+      - {x: 0.5076575, y: -0.60344577}
+      - {x: 0.600513, y: -0.5411389}
+      - {x: 0.708889, y: -0.3524356}
+      - {x: 0.7158942, y: -0.12695861}
       - {x: 0.523103, y: 0.36265975}
 --- !u!82 &82275641889364050
 AudioSource:
@@ -707,8 +752,8 @@ MonoBehaviour:
     tankShotPositionLeft: {fileID: 4293917733837178}
     tankShotPositionRight: {fileID: 4554148199114476}
   tankConfig:
-    maxSpeed: 10
-    maxMove: 2
+    maxSpeed: 2
+    maxMove: 200000
   direction: 0
   barrel: {fileID: 1919123713132048}
   barrelAngle: 0
@@ -719,6 +764,11 @@ MonoBehaviour:
   die: 0
   name: 
   active: 0
+  frontWheel: {fileID: 1733477215226978}
+  level:
+    serializedVersion: 2
+    m_Bits: 256
+  collisionRadius: 0.03
   currentHealth: 0
 --- !u!114 &114826735494101242
 MonoBehaviour:
