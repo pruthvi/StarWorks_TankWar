@@ -137,11 +137,11 @@ public class TankController : MonoBehaviour {
 
 				col2D = Physics2D.OverlapCircle (frontWheel.transform.position, collisionRadius, level);
 				if (col2D != null) {							
-					sRend.color = Color.red;				
+					//sRend.color = Color.red;				
 					float m = moveHoriz * tankConfig.maxSpeed * Time.deltaTime;
 					transform.Translate (new Vector3(m, Mathf.Abs(m),0));
 				} else {
-					sRend.color = Color.white;
+					//sRend.color = Color.white;
 					rBody.velocity = transform.right * tankConfig.maxSpeed * moveHoriz;
 				}					
 			} else {

@@ -48,9 +48,9 @@ public class WeaponSelection : MonoBehaviour {
 			audioSource.Play ();
 		for(int i=0; i<4; i++){
 			if (i == index) {				
-				weapons[i].wrapper.transform.Find ("background").GetComponent<SpriteRenderer> ().sprite = weaponBackgrounds [1];
+				weapons[i].wrapper.GetComponent<SpriteRenderer> ().sprite = weaponBackgrounds [1];
 			} else {
-				weapons[i].wrapper.transform.Find ("background").GetComponent<SpriteRenderer> ().sprite = weaponBackgrounds [0];
+				weapons[i].wrapper.GetComponent<SpriteRenderer> ().sprite = weaponBackgrounds [0];
 			}
 		}
 	}
@@ -58,9 +58,9 @@ public class WeaponSelection : MonoBehaviour {
 	public void setWeapon(int index){		
 		for(int i=0; i<4; i++){
 			if (i == index) {				
-				weapons[i].wrapper.transform.Find ("background").GetComponent<SpriteRenderer> ().sprite = weaponBackgrounds [1];
+				weapons[i].wrapper.GetComponent<SpriteRenderer> ().sprite = weaponBackgrounds [1];
 			} else {
-				weapons[i].wrapper.transform.Find ("background").GetComponent<SpriteRenderer> ().sprite = weaponBackgrounds [0];
+				weapons[i].wrapper.GetComponent<SpriteRenderer> ().sprite = weaponBackgrounds [0];
 			}
 		}
 	}

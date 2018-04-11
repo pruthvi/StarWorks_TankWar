@@ -64,11 +64,11 @@ public class GamePlayManager : MonoBehaviour {
 			}
 		}
 
-		if (players.Count == 1) {
-			winCanvas.enabled = true;
-			Time.timeScale = 0;
-			winner.text = currentTankController.name + " win";
-		}
+//		if (players.Count == 1) {
+//			winCanvas.enabled = true;
+//			Time.timeScale = 0;
+//			winner.text = currentTankController.name + " win";
+//		}
 
 
 		// Shoot
