@@ -37,9 +37,13 @@ public class TankController : MonoBehaviour {
 
 	//--------------------------
 	public GameObject frontWheel;
-	private Collider2D col2D;
+	public GameObject frontWheelLeft;
+	public GameObject centerPoint;
+	private Collider2D col2D1;
+	private Collider2D col2D2;
 	public LayerMask level;
 	public float collisionRadius = 0.1f;
+	public Vector3 v3 = new Vector3(1,1,0);
 	//--------------------------
 
 	public float currentHealth;
@@ -54,11 +58,14 @@ public class TankController : MonoBehaviour {
 	private AudioSource tankMove;
 	private AudioSource barrelMove;
 
-	private Vector3 v3 = new Vector3(1,1,0);
+
+
+	private Quaternion barrelRotaton;
 
 	void Start () {
 		rBody = this.GetComponent<Rigidbody2D>();
 		sRend = this.GetComponent<SpriteRenderer>();
+
 		animator = this.GetComponent<Animator>();	
 		exhaustFumeFrefab = Resources.Load("Prefabs/exhaustFume") as GameObject;
 		tankShotFrefab = Resources.Load ("Prefabs/TankShot") as GameObject;
@@ -81,11 +88,11 @@ public class TankController : MonoBehaviour {
 		
 	}
 
-	void OnDrawGizmosSelected() {
+	void OnDrawGizmos() {
 		Gizmos.color = Color.yellow;
 		Gizmos.DrawSphere(frontWheel.transform.position, collisionRadius);
-
-		Gizmos.DrawRay(frontWheel.transform.position, v3*10);
+		Gizmos.DrawSphere(frontWheelLeft.transform.position, collisionRadius);
+		Gizmos.DrawRay(centerPoint.transform.position, new Vector3(3,1,0));
 	}
 
 	void Update(){
@@ -132,49 +139,31 @@ public class TankController : MonoBehaviour {
 			} else {			
 				barrelAngle = Mathf.RoundToInt (barrel.transform.eulerAngles.z % 90);
 			}
+
+			barrelRotaton = barrel.transform.rotation;
 		}
 		return barrelAngle;
 	}
 
 	public void move(float moveHoriz, float moveTime){
 		if (active) {
+//			barrel.transform.rotation = barrelRotaton;
 			bool can_move = moveTime < tankConfig.maxMove;
-
-
-
-			if (can_move) {
-
-
-//				if (transform.rotation.z > 0) {
-//					rBody.velocity = new Vector2 (moveHoriz * tankConfig.maxSpeed, rBody.velocity.y);	
-//				} else {
-//					rBody.velocity = new Vector2 (moveHoriz * tankConfig.maxSpeed, rBody.velocity.y);	
-//				}
-
-				Vector3 v3 = new Vector3 ();
-				Vector2 v2 = new Vector2 ();
-
-				v3 = new Vector3(1,0,0);
-				v2 += Vector2.right;
+			if (can_move) {				
 
 				animator.SetFloat ("Speed", Mathf.Abs (moveHoriz));
 				exhaustFume.GetComponent<Animator> ().SetFloat ("Speed", Mathf.Abs (moveHoriz));
 
 
-				col2D = Physics2D.OverlapCircle(frontWheel.transform.position, collisionRadius, level);
-				if (col2D != null) {							
-					sRend.color = Color.red;
-//					while (col2D != null) {
-//						gameObject.transform.Rotate (new Vector3 (0, 0, gameObject.transform.rotation.z + 0.1f));
-//						col2D = Physics2D.OverlapCircle(frontWheel.transform.position, collisionRadius, level);
-//					}
-					v3 = new Vector3(1,1,0);
-				
+				col2D1 = Physics2D.OverlapCircle (frontWheel.transform.position, collisionRadius, level);
+				col2D2 = Physics2D.OverlapCircle(frontWheelLeft.transform.position, collisionRadius, level);
+				if ((col2D1 != null && direction == Direction.left) || 
+					(col2D2 != null && direction == Direction.right)) {							
+					sRend.color = Color.red;				
 					transform.Translate (moveHoriz * tankConfig.maxSpeed * v3.normalized * Time.deltaTime);
 				} else {
 					sRend.color = Color.white;
-					rBody.velocity = new Vector2 (moveHoriz * tankConfig.maxSpeed, rBody.velocity.y);	
-					transform.Translate (moveHoriz * tankConfig.maxSpeed * v3.normalized * Time.deltaTime);
+					rBody.velocity = transform.right * tankConfig.maxSpeed * moveHoriz;
 				}
 
 
@@ -191,6 +180,7 @@ public class TankController : MonoBehaviour {
 					if (!tankMove.isPlaying)
 						tankMove.Play ();
 				}
+
 
 
 			} else if (moveHoriz < 0) {						

@@ -72,6 +72,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1284850293874794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4215423596005028}
+  m_Layer: 9
+  m_Name: centerPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1323563085286228
 GameObject:
   m_ObjectHideFlags: 1
@@ -105,9 +120,25 @@ GameObject:
   - component: {fileID: 82275641889364050}
   - component: {fileID: 82729268621002586}
   - component: {fileID: 58309031561468752}
+  - component: {fileID: 58174593772369798}
   m_Layer: 9
   m_Name: Tank_1
   m_TagString: Player
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1655033767316316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4669817987370436}
+  m_Layer: 9
+  m_Name: frontWheelLeft
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4604985926366198}
   m_Layer: 9
-  m_Name: frontWheel
+  m_Name: frontWheelRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,6 +290,19 @@ Transform:
   m_Father: {fileID: 4424520209860280}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4215423596005028
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1284850293874794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4424520209860280}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4293917733837178
 Transform:
   m_ObjectHideFlags: 1
@@ -287,6 +331,8 @@ Transform:
   - {fileID: 4962408166189088}
   - {fileID: 4568320214413782}
   - {fileID: 4604985926366198}
+  - {fileID: 4669817987370436}
+  - {fileID: 4215423596005028}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -355,6 +401,19 @@ Transform:
   m_Father: {fileID: 4032951194949576}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4669817987370436
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1655033767316316}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.639, y: -0.563, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4424520209860280}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4962408166189088
 Transform:
   m_ObjectHideFlags: 1
@@ -381,13 +440,28 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 10000
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &58174593772369798
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1426637944690686}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.58594704, y: -0.47050261}
+  serializedVersion: 2
+  m_Radius: 0.13176894
 --- !u!58 &58309031561468752
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -429,11 +503,30 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 0.34044334, y: 0.53915256}
       - {x: 0.106487274, y: 0.58468133}
-      - {x: -0.15524124, y: 0.54306394}
-      - {x: -0.7069752, y: 0.044393767}
-      - {x: -0.7233403, y: -0.5165913}
-      - {x: -0.6172533, y: -0.60801363}
-      - {x: 0.5076575, y: -0.60344577}
+      - {x: 0.0023670197, y: 0.57002306}
+      - {x: -0.1024878, y: 0.49253225}
+      - {x: -0.14037442, y: 0.4350586}
+      - {x: -0.19313288, y: 0.4174919}
+      - {x: -0.21991706, y: 0.3799417}
+      - {x: -0.32946992, y: 0.37811756}
+      - {x: -0.36032128, y: 0.35268545}
+      - {x: -0.3470595, y: 0.28759122}
+      - {x: -0.2721455, y: 0.23871446}
+      - {x: -0.26846814, y: 0.14072323}
+      - {x: -0.41405606, y: 0.018141508}
+      - {x: -0.621989, y: 0.056293964}
+      - {x: -0.6942589, y: 0.024047613}
+      - {x: -0.70377135, y: -0.026219368}
+      - {x: -0.62501264, y: -0.042545795}
+      - {x: -0.6106837, y: -0.07749605}
+      - {x: -0.5168717, y: -0.096848965}
+      - {x: -0.58742833, y: -0.16511726}
+      - {x: -0.59359765, y: -0.20695281}
+      - {x: -0.6775615, y: -0.27752423}
+      - {x: -0.7254417, y: -0.3615682}
+      - {x: -0.7213609, y: -0.43883252}
+      - {x: -0.59182096, y: -0.6029272}
+      - {x: 0.53246164, y: -0.599705}
       - {x: 0.600513, y: -0.5411389}
       - {x: 0.708889, y: -0.3524356}
       - {x: 0.7158942, y: -0.12695861}
@@ -752,8 +845,8 @@ MonoBehaviour:
     tankShotPositionLeft: {fileID: 4293917733837178}
     tankShotPositionRight: {fileID: 4554148199114476}
   tankConfig:
-    maxSpeed: 2
-    maxMove: 200000
+    maxSpeed: 1
+    maxMove: 2
   direction: 0
   barrel: {fileID: 1919123713132048}
   barrelAngle: 0
@@ -765,10 +858,13 @@ MonoBehaviour:
   name: 
   active: 0
   frontWheel: {fileID: 1733477215226978}
+  frontWheelLeft: {fileID: 1655033767316316}
+  centerPoint: {fileID: 1284850293874794}
   level:
     serializedVersion: 2
     m_Bits: 256
   collisionRadius: 0.03
+  v3: {x: 1, y: 1, z: 0}
   currentHealth: 0
 --- !u!114 &114826735494101242
 MonoBehaviour:

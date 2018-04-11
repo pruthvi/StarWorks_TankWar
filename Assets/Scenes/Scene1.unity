@@ -3174,66 +3174,6 @@ Transform:
   m_Father: {fileID: 1384035392}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &986092862
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4424520209860280, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -3.798
-      objectReference: {fileID: 0}
-    - target: {fileID: 4424520209860280, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3.375
-      objectReference: {fileID: 0}
-    - target: {fileID: 4424520209860280, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.20941377
-      objectReference: {fileID: 0}
-    - target: {fileID: 4424520209860280, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4424520209860280, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4424520209860280, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4424520209860280, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4424520209860280, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224666734232993784, guid: c149a8bf4215642c2bcb7705aac9c7a4,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 224666734232993784, guid: c149a8bf4215642c2bcb7705aac9c7a4,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4034562508808618, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.613
-      objectReference: {fileID: 0}
-    - target: {fileID: 4034562508808618, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.323
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &986124040
 GameObject:
   m_ObjectHideFlags: 0
@@ -3824,6 +3764,66 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1131491205}
+--- !u!1001 &1145152987
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4424520209860280, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -3.798
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424520209860280, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424520209860280, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.20941377
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424520209860280, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424520209860280, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424520209860280, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424520209860280, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424520209860280, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224666734232993784, guid: c149a8bf4215642c2bcb7705aac9c7a4,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224666734232993784, guid: c149a8bf4215642c2bcb7705aac9c7a4,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1426637944690686, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1733477215226978, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
+      propertyPath: m_Name
+      value: frontWheelRight
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c149a8bf4215642c2bcb7705aac9c7a4, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1148539982
 GameObject:
   m_ObjectHideFlags: 0
@@ -8741,77 +8741,9 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1910862206}
-    m_ColliderPaths:
-    - - X: -1796875
-        Y: -30976562
-      - X: -6523437
-        Y: -30000000
-      - X: -14687500
-        Y: -30000000
-      - X: -19648438
-        Y: -31562500
-      - X: -20000000
-        Y: -31953124
-      - X: -20000000
-        Y: -32031250
-      - X: -20429688
-        Y: -32031250
-      - X: -25162000
-        Y: -34843752
-      - X: -27781108
-        Y: -37259876
-      - X: -30000000
-        Y: -39843752
-      - X: -30000000
-        Y: -40000000
-      - X: -100000000
-        Y: -40000000
-      - X: -100000000
-        Y: -70000000
-      - X: 520000000
-        Y: -70000000
-      - X: 520000000
-        Y: -40000000
-      - X: 10000000
-        Y: -40000000
-      - X: 10000000
-        Y: -39843752
-      - X: 8242187
-        Y: -37617188
-      - X: 5117187
-        Y: -34648436
-      - X: 429687
-        Y: -32031250
-      - X: 0
-        Y: -32031250
-      - X: 0
-        Y: -31914062
+  m_ColliderPaths: []
   m_CompositePaths:
-    m_Paths:
-    - - {x: 52, y: -4}
-      - {x: 1, y: -4}
-      - {x: 1, y: -3.9843752}
-      - {x: 0.8242187, y: -3.7617188}
-      - {x: 0.5117187, y: -3.4648438}
-      - {x: 0.0429687, y: -3.203125}
-      - {x: 0, y: -3.203125}
-      - {x: 0, y: -3.1914062}
-      - {x: -0.1796875, y: -3.0976562}
-      - {x: -0.6523437, y: -3}
-      - {x: -1.46875, y: -3}
-      - {x: -1.9648439, y: -3.15625}
-      - {x: -2, y: -3.1953125}
-      - {x: -2, y: -3.203125}
-      - {x: -2.0429688, y: -3.203125}
-      - {x: -2.5162, y: -3.4843752}
-      - {x: -2.7781107, y: -3.7259877}
-      - {x: -3, y: -3.9843752}
-      - {x: -3, y: -4}
-      - {x: -10, y: -4}
-      - {x: -10, y: -7}
-      - {x: 52, y: -7}
+    m_Paths: []
   m_VertexDistance: 0.0005
 --- !u!50 &1910862205
 Rigidbody2D:
@@ -8844,7 +8776,7 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
 --- !u!1 &1916213673
 GameObject:
