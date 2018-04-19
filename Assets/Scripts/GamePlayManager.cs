@@ -20,13 +20,17 @@ public class GamePlayManager : MonoBehaviour {
 	public Transform[] spawnPositions;
 	public WeaponSelection weaponSelection;
 
-	private int selectedTank;
+    public GameObject cloud;
+
+
+    private int selectedTank;
 	private float currentMoveTime = 0.0f;
 	private float timeLeft;
 	private TankController currentTankController;
 	private int turn = -1;
 	private float shootingForce = 0.0f;
 	private bool powerbarMoveUp = true;
+
 
 	public static GamePlayManager instance = null;
 
@@ -45,6 +49,7 @@ public class GamePlayManager : MonoBehaviour {
 		}
 
 		powerSlider.value = 0.0f;
+        CreateCloud();
 
 		loadNextPlayer ();
 		countDownTimer.text = timeLeft.ToString();
@@ -149,4 +154,25 @@ public class GamePlayManager : MonoBehaviour {
 		previousAngle.text = currentTankController.barrelAngle.ToString ();
 		weaponSelection.setWeapon (currentTankController.currentWeapon);
 	}
+
+    public void CreateCloud()
+    {
+        int No = Random.Range(8,15);
+
+        for(int i=0;i<No;i++)
+        {
+            Vector2 position = new Vector2(Random.Range(-20, 100), Random.Range(5, 10));
+            float scale = Random.Range(0.5f, 2.0f);
+
+            // Debug.Log("Random Scale:" + scale);
+
+            GameObject gb = Instantiate(cloud, position, Quaternion.identity);
+            gb.transform.localScale = new Vector2 (scale, scale);
+
+            // Debug.Log("Randomly Scale!");
+
+
+        }
+
+    }
 }
