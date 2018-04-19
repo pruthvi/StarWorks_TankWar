@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114614119917276270}
   m_Layer: 1
   m_Name: Explosion
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,7 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42fb71f616184d058a3f516d08a4255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
 --- !u!212 &212351465029797552
 SpriteRenderer:
   m_ObjectHideFlags: 1

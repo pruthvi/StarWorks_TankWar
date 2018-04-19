@@ -20,22 +20,38 @@ public class Bullet : MonoBehaviour {
 	void Update () {
 
 		col2D = Physics2D.OverlapCircle(gameObject.transform.position, collisionRadius, WhatToCollideWith);
-		if(col2D != null) {			
+
+
+		if(col2D != null)
+        {			
 			GameObject ex = Instantiate (explosion, gameObject.transform.position, gameObject.transform.rotation) as GameObject;
 
 			Destroy (gameObject);
 
-			if (col2D.tag == "Player") {				
+            if (col2D.tag == "Player")
+            {				
 				col2D.GetComponent<TankController> ().Damage (damageAmt);
 			}
 		};	
 	}
 
-//	void OnCollisionEnter(Collision collision)
-//	{
-//		Debug.Log ("aaa");
-//		GameObject ex = Instantiate (explosion, gameObject.transform.position, gameObject.transform.rotation) as GameObject;
-//		Destroy (ex, 0.8f);
-//		Destroy (gameObject);
-//	}
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Dobject")
+        {
+            GameObject ex = Instantiate(explosion, gameObject.transform.position, gameObject.transform.rotation) as GameObject;
+
+            Destroy(this.gameObject);
+        }
+    }
+
+
+
+    //	void OnCollisionEnter(Collision collision)
+    //	{
+    //		Debug.Log ("aaa");
+    //		GameObject ex = Instantiate (explosion, gameObject.transform.position, gameObject.transform.rotation) as GameObject;
+    //		Destroy (ex, 0.8f);
+    //		Destroy (gameObject);
+    //	}
 }

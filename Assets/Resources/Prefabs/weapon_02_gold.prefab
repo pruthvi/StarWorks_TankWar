@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114478446404640632}
   m_Layer: 0
   m_Name: weapon_02_gold
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,6 +118,7 @@ MonoBehaviour:
   WhatToCollideWith:
     serializedVersion: 2
     m_Bits: 256
+  damageAmt: 10
 --- !u!212 &212825491118624162
 SpriteRenderer:
   m_ObjectHideFlags: 1

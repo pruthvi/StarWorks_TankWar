@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114771510651903668}
   m_Layer: 0
   m_Name: weapon_16_surprise_stones
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
   collisionRadius: 0.2
   WhatToCollideWith:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 800
   damageAmt: 25
 --- !u!212 &212869561580451620
 SpriteRenderer:
