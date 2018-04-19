@@ -163,14 +163,11 @@ public class GamePlayManager : MonoBehaviour {
         {
             Vector2 position = new Vector2(Random.Range(-20, 100), Random.Range(5, 10));
             float scale = Random.Range(0.5f, 2.0f);
-
             // Debug.Log("Random Scale:" + scale);
 
             GameObject gb = Instantiate(cloud, position, Quaternion.identity);
             gb.transform.localScale = new Vector2 (scale, scale);
-
-            // Debug.Log("Randomly Scale!");
-
+            // Debug.Log("Randomly Scaled!");
 
         }
 
