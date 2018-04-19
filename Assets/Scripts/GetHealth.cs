@@ -10,7 +10,7 @@ public class GetHealth : MonoBehaviour {
         {
             collision.gameObject.GetComponent<TankController>().currentHealth += 50;
             Destroy(this.gameObject);
-            Debug.Log("Health Added");
+            //Debug.Log("Health Added");
 
 
         }
