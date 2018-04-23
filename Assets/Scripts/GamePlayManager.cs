@@ -19,7 +19,8 @@ public class GamePlayManager : MonoBehaviour {
 	public Text winner;
 	public Transform[] spawnPositions;
 	public WeaponSelection weaponSelection;
-
+	public GameObject playerTurnBoard;
+	public Text playerTurnTxt;
     public GameObject cloud;
 
 
@@ -153,6 +154,18 @@ public class GamePlayManager : MonoBehaviour {
 		moveSlider.value = 0.0f;
 		previousAngle.text = currentTankController.barrelAngle.ToString ();
 		weaponSelection.setWeapon (currentTankController.currentWeapon);
+
+		playerTurnBoard.SetActive (true);
+		playerTurnTxt.text = currentPlayer.GetComponent<TankController> ().name + " Turn";
+
+		StartCoroutine(ExecuteAfterTime(1));
+	}
+
+	IEnumerator ExecuteAfterTime(float time)
+	{
+		yield return new WaitForSeconds(time);
+
+		playerTurnBoard.SetActive (false);
 	}
 
     public void CreateCloud()
