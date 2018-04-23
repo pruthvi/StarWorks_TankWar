@@ -10,6 +10,8 @@ public class N_GameController : MonoBehaviour {
     public GameObject heart;
     public GameObject ammo;
 
+    public GameObject[] selectorArr = new GameObject[10];
+
     public int Health = 50;
     public Text healthText;
 
@@ -35,7 +37,7 @@ public class N_GameController : MonoBehaviour {
     void Update()
     {
 
-        healthText.text = "Health = " + Health;
+        healthText.text = "Health : " + Health;
         //ammoText.text = "Ammo = " + Ammo;
 
         CheckHealth();
@@ -51,6 +53,8 @@ public class N_GameController : MonoBehaviour {
 
     private void CheckHealth()
     {
+        UpdateHealth();
+
         if (Health <= 0)
         {
             Network.Disconnect();
@@ -61,5 +65,51 @@ public class N_GameController : MonoBehaviour {
             Debug.Log("Player Died");
             return;
         }
+    }
+
+    void UpdateHealth()
+    {
+        switch (Health)
+        {
+            case 90:
+                selectorArr[0].SetActive(false);
+                break;
+            case 80:
+                selectorArr[1].SetActive(false);
+                break;
+            case 70:
+                selectorArr[2].SetActive(false);
+                break;
+            case 60:
+                selectorArr[3].SetActive(false);
+                break;
+            case 50:
+                selectorArr[4].SetActive(false);
+                break;
+            case 40:
+                selectorArr[5].SetActive(false);
+                break;
+            case 30:
+                selectorArr[6].SetActive(false);
+                break;
+            case 20:
+                selectorArr[7].SetActive(false);
+                break;
+            case 10:
+                selectorArr[8].SetActive(false);
+                break;
+            case 0:
+                selectorArr[9].SetActive(false);
+                break;
+
+            default:
+                break;
+        }
+
+
+
+
+
+
     }
 }
