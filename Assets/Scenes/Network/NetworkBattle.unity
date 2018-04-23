@@ -1213,6 +1213,7 @@ MonoBehaviour:
   healthText: {fileID: 181645433}
   Ammo: 0
   ammoText: {fileID: 1784258610}
+  FireTank: {fileID: 1141826583813560, guid: a755ee7ed2a497843a1b6f11d6f92f45, type: 2}
 --- !u!114 &1036173606
 MonoBehaviour:
   m_ObjectHideFlags: 0

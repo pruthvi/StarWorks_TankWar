@@ -18,6 +18,8 @@ public class N_GameController : MonoBehaviour {
     public int Ammo;
     public Text ammoText;
 
+    public GameObject FireTank;
+
     // Use this for initialization
     void Start()
     {
@@ -55,16 +57,30 @@ public class N_GameController : MonoBehaviour {
     {
         UpdateHealth();
 
-        if (Health <= 0)
+        if (Health <= 80)
         {
             Network.Disconnect();
             MasterServer.UnregisterHost();
 
+
             GameObject gb = GameObject.FindGameObjectWithTag("Player");
+            Vector2 pos = gb.transform.position ;
+            Quaternion rot = gb.transform.rotation;
+            CreateFire(pos, rot);
             Destroy(gb);
+
             Debug.Log("Player Died");
+
+
+
             return;
         }
+    }
+
+    void CreateFire(Vector2 pos, Quaternion rot)
+    {
+        Instantiate(FireTank, pos, rot);
+
     }
 
     void UpdateHealth()
