@@ -111,7 +111,14 @@ public class GamePlayManager : MonoBehaviour {
 		currentAngle.text = currentTankController.adjustBarrel (moveVertical).ToString();
 
 		// Move camera following current player
-		mainCamera.transform.position = new Vector3 (currentPlayer.transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z);
+		if (currentPlayer.transform.position.x <0) {
+			mainCamera.transform.position = new Vector3 (0f, mainCamera.transform.position.y, mainCamera.transform.position.z);	
+		} else if (currentPlayer.transform.position.x > 23)  {
+			mainCamera.transform.position = new Vector3 (23f, mainCamera.transform.position.y, mainCamera.transform.position.z);	
+		}		
+		else{
+			mainCamera.transform.position = new Vector3 (currentPlayer.transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z);	
+		}
 
 
 

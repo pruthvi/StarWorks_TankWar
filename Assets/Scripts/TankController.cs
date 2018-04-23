@@ -93,7 +93,7 @@ public class TankController : MonoBehaviour {
 		}
 
 		Debug.Log (transform.rotation.z);
-
+	
 		while(transform.rotation.z < -0.39f)
 		{
 			transform.Rotate (0,0,1);
