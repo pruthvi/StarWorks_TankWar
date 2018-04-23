@@ -61,7 +61,6 @@ public class GamePlayManager : MonoBehaviour {
 	void Update () {
 
 		currentTankController = currentPlayer.GetComponent<TankController> ();
-
 		foreach (GameObject player in players) {
 			TankController tankcontroller = player.GetComponent<TankController> ();
 			if (tankcontroller.die) {	
@@ -113,6 +112,8 @@ public class GamePlayManager : MonoBehaviour {
 
 		// Move camera following current player
 		mainCamera.transform.position = new Vector3 (currentPlayer.transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z);
+
+
 
 		// Time Count Down
 		TimeCountDown ();

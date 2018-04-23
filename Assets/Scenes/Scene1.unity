@@ -8406,7 +8406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPlayer: {fileID: 0}
   mainCamera: {fileID: 1113793926}
-  turnDuration: 15
+  turnDuration: 150
   players: []
   powerSlider: {fileID: 1452940745}
   moveSlider: {fileID: 1358533320}
@@ -9582,11 +9582,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4258665890369110, guid: ef85d058107c1f245ab64066f08a220f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 42.75
+      value: -6.2
       objectReference: {fileID: 0}
     - target: {fileID: 4258665890369110, guid: ef85d058107c1f245ab64066f08a220f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.84
+      value: 6.21
       objectReference: {fileID: 0}
     - target: {fileID: 4258665890369110, guid: ef85d058107c1f245ab64066f08a220f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -13451,7 +13451,7 @@ Prefab:
     - target: {fileID: 114807293124850554, guid: f1f4ff39d48da4bde978fdf2e751dfdd,
         type: 2}
       propertyPath: turnDuration
-      value: 15
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 114807293124850554, guid: f1f4ff39d48da4bde978fdf2e751dfdd,
         type: 2}
@@ -24086,7 +24086,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1916213673}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.24, y: 1.81, z: 0}
+  m_LocalPosition: {x: -8.71, y: 0.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1384035392}
