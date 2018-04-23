@@ -1,0 +1,1017 @@
+fileFormatVersion: 2
+guid: e3d226377d6c70b4ebbd86d43d8bd106
+timeCreated: 1524469040
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: fire-tank_0
+    21300002: fire-tank_1
+    21300004: fire-tank_2
+    21300006: fire-tank_3
+    21300008: fire-tank_4
+    21300010: fire-tank_5
+    21300012: fire-tank_6
+    21300014: fire-tank_7
+    21300016: fire-tank_8
+    21300018: fire-tank_9
+    21300020: fire-tank_10
+    21300022: fire-tank_11
+    21300024: fire-tank_12
+    21300026: fire-tank_13
+    21300028: fire-tank_14
+    21300030: fire-tank_15
+    21300032: fire-tank_16
+    21300034: fire-tank_17
+    21300036: fire-tank_18
+    21300038: fire-tank_19
+    21300040: fire-tank_20
+    21300042: fire-tank_21
+    21300044: fire-tank_22
+    21300046: fire-tank_23
+    21300048: fire-tank_24
+    21300050: fire-tank_25
+    21300052: fire-tank_26
+    21300054: fire-tank_27
+    21300056: fire-tank_28
+    21300058: fire-tank_29
+    21300060: fire-tank_30
+    21300062: fire-tank_31
+    21300064: fire-tank_32
+    21300066: fire-tank_33
+    21300068: fire-tank_34
+    21300070: fire-tank_35
+    21300072: fire-tank_36
+    21300074: fire-tank_37
+    21300076: fire-tank_38
+    21300078: fire-tank_39
+    21300080: fire-tank_40
+    21300082: fire-tank_41
+    21300084: fire-tank_42
+    21300086: fire-tank_43
+    21300088: fire-tank_44
+    21300090: fire-tank_45
+    21300092: fire-tank_46
+    21300094: fire-tank_47
+    21300096: fire-tank_48
+    21300098: fire-tank_49
+    21300100: fire-tank_50
+    21300102: fire-tank_51
+    21300104: fire-tank_52
+    21300106: fire-tank_53
+    21300108: fire-tank_54
+    21300110: fire-tank_55
+    21300112: fire-tank_56
+    21300114: fire-tank_57
+    21300116: fire-tank_58
+    21300118: fire-tank_59
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fire-tank_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4367
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_1
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 4367
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_2
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 4367
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_3
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 4367
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_4
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 4367
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3970
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_6
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 3970
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_7
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 3970
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_8
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 3970
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_9
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 3970
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3573
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_11
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 3573
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_12
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 3573
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_13
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 3573
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_14
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 3573
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3176
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_16
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 3176
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_17
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 3176
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_18
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 3176
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_19
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 3176
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2779
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_21
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 2779
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_22
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 2779
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_23
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 2779
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_24
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 2779
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2382
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_26
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 2382
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_27
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 2382
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_28
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 2382
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_29
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 2382
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1985
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_31
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1985
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_32
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1985
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_33
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 1985
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_34
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1985
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1588
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_36
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1588
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_37
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1588
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_38
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 1588
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_39
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1588
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1191
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_41
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1191
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_42
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1191
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_43
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 1191
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_44
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1191
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 794
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_46
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 794
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_47
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 794
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_48
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 794
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_49
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 794
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 397
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_51
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 397
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_52
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 397
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_53
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 397
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_54
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 397
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_56
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 0
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_57
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 0
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_58
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 0
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fire-tank_59
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 0
+        width: 267
+        height: 397
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
