@@ -118,7 +118,7 @@ public class GamePlayManager : MonoBehaviour {
 		TimeCountDown ();
 	}
 
-	public void setWeapon(int index, string weaponName = "weapon_16_surprise_stones"){
+	public void setWeapon(int index, string weaponName = "weapon_16_surprise_stones"){		
 		currentTankController.setWeapon (index, weaponName);
 	}
 
@@ -153,6 +153,7 @@ public class GamePlayManager : MonoBehaviour {
 		powerSlider.value = 0.0f;
 		moveSlider.value = 0.0f;
 		previousAngle.text = currentTankController.barrelAngle.ToString ();
+
 		weaponSelection.setWeapon (currentTankController.currentWeapon);
 
 		playerTurnBoard.SetActive (true);
