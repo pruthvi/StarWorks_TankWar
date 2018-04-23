@@ -15,4 +15,10 @@ public class StartMenuHandler : MonoBehaviour {
 		Debug.Log("Setting Button Clicked");
 		//Application.Quit(); // Quits your game.
 	}
+
+    public void NetworkButton()
+    {
+        SceneManager.LoadScene("NetworkBattle");
+    }
+
 }
