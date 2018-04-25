@@ -8361,7 +8361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPlayer: {fileID: 0}
   mainCamera: {fileID: 1113793926}
-  turnDuration: 150
+  turnDuration: 15
   players: []
   powerSlider: {fileID: 1452940745}
   moveSlider: {fileID: 1358533320}
@@ -13406,7 +13406,7 @@ Prefab:
     - target: {fileID: 114807293124850554, guid: f1f4ff39d48da4bde978fdf2e751dfdd,
         type: 2}
       propertyPath: turnDuration
-      value: 150
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114807293124850554, guid: f1f4ff39d48da4bde978fdf2e751dfdd,
         type: 2}
@@ -18342,7 +18342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.729}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

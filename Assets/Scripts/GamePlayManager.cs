@@ -73,6 +73,7 @@ public class GamePlayManager : MonoBehaviour {
 			winCanvas.enabled = true;
 			Time.timeScale = 0;
 			winner.text = currentTankController.name + " win";
+			playerTurnBoard.SetActive (false);
 		}
 
 

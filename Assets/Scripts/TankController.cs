@@ -91,8 +91,6 @@ public class TankController : MonoBehaviour {
 			exhaustFume.GetComponent<Animator> ().SetFloat ("Speed", 0);
 			exhaustFume.GetComponent<SpriteRenderer> ().enabled = false;
 		}
-
-		Debug.Log (transform.rotation.z);
 	
 		while(transform.rotation.z < -0.39f)
 		{
