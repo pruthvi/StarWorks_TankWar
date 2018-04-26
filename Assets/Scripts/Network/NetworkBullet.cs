@@ -24,7 +24,7 @@ public class NetworkBullet : NetworkBehaviour {
         {
             Debug.Log("Player Collider!");
 
-            GameObject.Find("GameController").GetComponent<N_GameController>().Health -= 10;
+            GameObject.Find("GameController").GetComponent<N_GameController>().Health -= 5;
             Debug.Log("Health reduced!");
         }
 

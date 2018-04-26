@@ -57,7 +57,7 @@ public class N_GameController : MonoBehaviour {
     {
         UpdateHealth();
 
-        if (Health <= 80)
+        if (Health <= 0)
         {
             Network.Disconnect();
             MasterServer.UnregisterHost();
