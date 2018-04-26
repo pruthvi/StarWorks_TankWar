@@ -91,6 +91,11 @@ public class TankController : MonoBehaviour {
 			exhaustFume.GetComponent<Animator> ().SetFloat ("Speed", 0);
 			exhaustFume.GetComponent<SpriteRenderer> ().enabled = false;
 		}
+	
+		while(transform.rotation.z < -0.39f)
+		{
+			transform.Rotate (0,0,1);
+		}
 	}
 
 	public void Damage (float damageAmt) {
@@ -128,6 +133,7 @@ public class TankController : MonoBehaviour {
 	}
 
 	public void move(float moveHoriz, float moveTime){
+
 		if (active) {
 			bool can_move = moveTime < tankConfig.maxMove;
 			if (can_move) {				

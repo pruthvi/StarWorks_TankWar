@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
-
-public class N_GameController : MonoBehaviour {
+public class N_GameController : NetworkBehaviour {
 
     
     public GameObject heart;
@@ -59,8 +59,8 @@ public class N_GameController : MonoBehaviour {
 
         if (Health <= 0)
         {
-            Network.Disconnect();
-            MasterServer.UnregisterHost();
+//            Network.Disconnect();
+//            MasterServer.UnregisterHost();
 
 
             GameObject gb = GameObject.FindGameObjectWithTag("Player");

@@ -61,7 +61,6 @@ public class GamePlayManager : MonoBehaviour {
 	void Update () {
 
 		currentTankController = currentPlayer.GetComponent<TankController> ();
-
 		foreach (GameObject player in players) {
 			TankController tankcontroller = player.GetComponent<TankController> ();
 			if (tankcontroller.die) {	
@@ -74,6 +73,7 @@ public class GamePlayManager : MonoBehaviour {
 			winCanvas.enabled = true;
 			Time.timeScale = 0;
 			winner.text = currentTankController.name + " win";
+			playerTurnBoard.SetActive (false);
 		}
 
 
@@ -112,7 +112,16 @@ public class GamePlayManager : MonoBehaviour {
 		currentAngle.text = currentTankController.adjustBarrel (moveVertical).ToString();
 
 		// Move camera following current player
-		mainCamera.transform.position = new Vector3 (currentPlayer.transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z);
+		if (currentPlayer.transform.position.x <0) {
+			mainCamera.transform.position = new Vector3 (0f, mainCamera.transform.position.y, mainCamera.transform.position.z);	
+		} else if (currentPlayer.transform.position.x > 23)  {
+			mainCamera.transform.position = new Vector3 (23f, mainCamera.transform.position.y, mainCamera.transform.position.z);	
+		}		
+		else{
+			mainCamera.transform.position = new Vector3 (currentPlayer.transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z);	
+		}
+
+
 
 		// Time Count Down
 		TimeCountDown ();
